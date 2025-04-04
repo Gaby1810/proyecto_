@@ -1,0 +1,419 @@
+/**
+* Template Name: Restaurantly - v3.1.0
+* Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+ 
+  font-family: "Open Sans", sans-serif;
+  background-color: #000;
+  background:url("/assets/img/hero-bg.jpg");
+  color: #fff;
+  
+}
+
+a {
+  color: #cda45e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d9ba85;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  box-shadow: black;
+  padding: 15px;
+  width: 100%;
+  height: 50px;
+  background:black; /* Temporary for debugging */
+  position: relative;
+  z-index: 2; 
+  
+}
+#header .logo {
+  font-size: 20px; /* Fixed typo from 20x */
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #462600;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+.logo .highlight {
+  color: #d4950e;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  left:100px;
+  background-color: #000;
+}
+
+
+
+/* General Styles */
+.navbar {
+  max-width: 50%; /* Barra con un ancho más pequeño */
+  background: rgba(40, 37, 37, 0.5); /* Transparente estilo cristal */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(10px); /* Efecto cristal */
+  position: relative; /* Fija la barra en la parte superior */
+  top: 0;
+  left: 500px; /* Centra la barra horizontalmente */
+  z-index: 999; /* Asegura que esté por encima del resto */
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: #ffd700; /* Letras doradas */
+  text-shadow: 1px 1px 2px #000; /* Contorno negro */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #fdfcfa; /* Dorado más claro */
+  text-shadow: 2px 2px 4px #000;
+}
+
+.navbar .dropdown {
+  position: relative;
+}
+
+.navbar .dropdown ul {
+  position: absolute;
+  top: 0;
+  left: 0; /* Despliega a la derecha */
+  width: 200px;
+  background: rgba(255, 255, 255, 0.8); /* Transparente estilo cristal */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  padding: 10px 0;
+  list-style: none;
+  display: none;
+  backdrop-filter: blur(10px);
+  z-index: 999; /* Prioridad visual por encima de otros elementos */
+}
+
+.navbar .dropdown:hover > ul {
+  display: block;
+  background-color: #000;
+}
+
+/* Submenú de segundo nivel ajustado */
+.navbar .dropdown ul li {
+  position: relative;
+  background-color: #000;
+  
+  
+}
+
+.navbar .dropdown ul li ul {
+  top: 0;
+  left: 100%; /* Asegura que el segundo submenú se despliegue a la derecha */
+  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+    left: 0; /* Centra correctamente en móviles */
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .navbar .dropdown ul {
+    width: 100%;
+    position: static;
+    box-shadow: none;
+  }
+}
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg");
+  background-size:cover;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color:black; /* Fondo oscuro directamente */
+  width: 70px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease;
+  margin-top: 0px; 
+  width: 220px; /* Ancho expandido */
+  z-index: 2; 
+  display: block;
+}
+
+/* Encabezado con flecha */
+.menu-lateral header {
+  display: flex;
+  align-items: center;
+  color:white;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+
+.menu {
+  
+  padding: 0;
+  color: #f8e3b6;
+  
+  
+}
+
+.menu li {
+  margin-bottom: 15px;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff; /* Texto blanco para contraste en fondo oscuro */
+  padding: 5px;
+  transition: 0.3s;
+  margin-top: 50px;
+}
+
+.menu li a img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #bf9004;
+}
+
+.menu li a .text {
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.menu-lateral.close .menu li a .text {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  
+}
+
+/* Hover */
+.menu li a:hover {
+  transform: scale(1.05);
+  color: #cda45e; /* Color de hover */
+}
+
+.menu li a:hover img {
+  border-color: #ffe8a6;
+  box-shadow: 0 0 8px #ffe8a6;
+}
+
+/* Mural de información */
+  
+  
+.div3 {
+  grid-column: span 5 / span 5;
+  grid-row: span 6 / span 6;
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  margin: 20px auto;
+  position: relative;
+  left: 100px; 
+  top: 0;
+  transform: translate(120px);
+  animation: fadeIn 1s ease-in-out forwards;
+  margin-top: 25px;
+  margin-left: 150px; /* Para evitar que choque con el menú lateral */
+  margin-right: 35px;
+}
+
+
+
+.image {
+max-width: 40%;
+height: auto;
+border-radius: 5px;
+float: left; 
+margin-left: 15px; 
+margin-bottom: 15px; 
+;
+
+}
+.img1 {
+max-width: 170px; 
+height: auto;
+border-radius: 5px;
+float: right; 
+margin-left: 15px; 
+margin-bottom: 15px; 
+}
+.img2 {
+max-width: 400px; 
+height: auto;
+border-radius: 5px;
+float: right; 
+margin-left: 15px; 
+margin-bottom: 15px; 
+}
+
+#biografia.curiosidades.legado.contexto{
+  text-align: center;
+}
+
+/* Estilo para los títulos */
+h2 {
+  font-size: 1.8em;
+  color: #bf9004;  /* Color dorado */
+  border-bottom: 2px solid #f8e3b6;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #3c3400;
+  margin-bottom: 20px;
+}
+
+
+p {
+
+  font-size: 1.2em;
+  line-height: 2; /* Incrementamos el espacio entre líneas */
+  color: #000000;
+  text-align: justify;
+  background-color: #ffffff;
+  padding: 25px; /* Aumentamos el padding para mayor espacio interior */
+  border-left: 5px solid #ffea03;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Espaciado adicional debajo del párrafo */
+}
+
+
+.img1{ font-size: 1.2em;
+line-height: 1.6;
+color: #000000;
+text-align: justify;
+background-color: #ffffff;
+padding: 15px;
+border-left: 5px solid #412700;
+border-radius: 5px;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+margin-bottom: 15px;}
+
+.image{font-size: 1.2em;
+line-height: 1.6;
+color: #000000;
+text-align: justify;
+background-color: #ffffff;
+padding: 15px;
+border-left: 5px solid #412700;
+border-radius: 5px;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+margin-bottom: 15px;}
+
+.img2{font-size: 1.2em;
+  line-height: 1.6;
+  color: #000000;
+  text-align: justify;
+  background-color: #ffffff;
+  padding: 15px;
+  border-left: 5px solid #412700;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.box:nth-child(2) {
+    animation-delay: 0.9;
+}
+.box:nth-child(3) {
+    animation-delay: 0.10s;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Personajes Historicos</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <!-- Template Main CSS File -->
+  <link href="marie.css" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-cente">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+  
+        <h1 class="logo">
+    <span class="highlight">M</span>arie Curie
+  </h1>
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+  
+      <!-- Menú desplegable -->
+      <li class="dropdown">
+        <input type="checkbox" id="toggle-personajes" hidden>
+        <label for="toggle-personajes" class="nav-link scrollto active">Personajes Históricos ▼</label>
+        
+        <ul>
+          <li class="dropdown">
+            <a href="tesla.html">Nikola Tesla</a>
+            <ul>
+              <li><a href="tesla_biografia.html">Biografía</a></li>
+              <li><a href="tesla_legado.html">Legado</a></li>
+              <li><a href="tesla_contexto.html">Contexto</a></li>
+              <li><a href="tesla_curiosidades.html">Curiosidades</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="marie.html">Marie Curie</a>
+            <ul>
+              <li><a href="marie_biografia.html">Biografía</a></li>
+              <li><a href="marie_legado.html">Legado</a></li>
+              <li><a href="marie_contexto.html">Contexto</a></li>
+              <li><a href="marie_curiosidades.html">Curiosidades</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="leonardo.html">Leonardo da Vinci</a>
+            <ul>
+              <li><a href="leonardo_biografia.html">Biografía</a></li>
+              <li><a href="leonardo_legado.html">Legado</a></li>
+              <li><a href="leonardo_contexto.html">Contexto</a></li>
+              <li><a href="leonardo_curiosidades.html">Curiosidades</a></li>
+            </ul>
+          </li>
+          
+    <li class="dropdown">
+        <a href="neil.html"><span class="full-name">Neil Armstrong</span></a>
+        <ul>
+            <li><a href="neil_biografia.html">Biografía</a></li>
+            <li><a href="neil_legado.html">Legado</a></li>
+            <li><a href="neil_contexto.html">Contexto</a></li>
+            <li><a href="neil_curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="felipe.html"><span class="full-name">Felipe II Rey de España</span></a>
+        <ul>
+            <li><a href="felipe_biografia.html">Biografía</a></li>
+            <li><a href="felipe_legado.html">Legado</a></li>
+            <li><a href="felipe_contexto.html">Contexto</a></li>
+            <li><a href="felipe_curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="juan.html"><span class="full-name">Juan Pablo II</span></a>
+        <ul>
+            <li><a href="juan_biografia.html">Biografía</a></li>
+            <li><a href="juan_legado.html">Legado</a></li>
+            <li><a href="juan_contexto.html">Contexto</a></li>
+            <li><a href="juan_curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </li>
+  </ul>
+  
+      <li><a class="nav-link scrollto" href="galeria.html">Galería</a></li>
+      <li><a class="nav-link scrollto" href="creadores.html">Creadoras</a></li>
+      <li><a class="nav-link scrollto" href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+   
+  
+
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <div class="menu-lateral close">
+    <header>
+      <span class="toggle" onclick="toggleMenu()">&#8250;</span> <!-- Flecha para abrir/cerrar -->
+    </header>
+    <ul class="menu-links">
+      <li>
+        <a href="#biografia">
+          <img src="proyectohtml/assets/img/marie.png" alt="Icono Biografía">
+          <span class="text nav-text">Biografía</span>
+        </a>
+      </li>
+      <li>
+        <a href="#legado">
+          <img src="proyectohtml/assets/img/legado.png" alt="Icono Legado">
+          <span class="text nav-text">Legado</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contexto">
+          <img src="proyectohtml/assets/img/contexto.png" alt="Icono Contexto">
+          <span class="text nav-text">Contexto</span>
+        </a>
+      </li>
+      <li>
+        <a href="#curiosidades">
+          <img src="proyectohtml/assets/img/curiosidades.png" alt="Icono Curiosidades">
+          <span class="text nav-text">Curiosidades</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+        
+<script>
+    const body = document.querySelector('body'),
+          sidebar = body.querySelector('.menu-lateral'),
+          toggle = body.querySelector('.toggle'),
+          modeSwitch = body.querySelector('.toggle-switch'),
+          modeText = body.querySelector('.mode-text');
+
+    toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+    });
+
+    modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        modeText.innerText = body.classList.contains("dark") ? "Modo Claro" : "Modo Oscuro";
+    });
+</script>
+
+    <!-- Contenedor de información -->
+    <div class="info-mural">
+        <section id="biografia">
+            <h2>Biografía</h2>
+            <p>Marie Curie fue una científica pionera nacida en Polonia en 1867. Reconocida por descubrir el radio y el polonio, y por ser la primera mujer en ganar un Premio Nobel.</p>
+        </section>
+        <section id="legado">
+            <h2>Legado</h2>
+            <p>Su trabajo sentó las bases de la física nuclear y la radioterapia moderna. Inspiró a generaciones de mujeres en ciencia.</p>
+        </section>
+        <section id="contexto">
+            <h2>Contexto</h2>
+            <p>Vivió en una época donde las mujeres enfrentaban barreras significativas en la educación y la ciencia, pero superó estas limitaciones con su dedicación.</p>
+        </section>
+        <section id="curiosidades">
+            <h2>Curiosidades</h2>
+            <p>Marie Curie donó sus medallas de oro para contribuir al esfuerzo de guerra durante la Primera Guerra Mundial.</p>
+        </section>
+    </div>
+
+
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
