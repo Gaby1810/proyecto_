@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galeria</title>
+    <link rel="stylesheet" href="assets\css\galeria.css">
+</head>
+<body>
+  
+  
+<header id="header" class="container1">
+  <div class="contain">
+
+    <h1 class="logo"></h1>
+    
+<!-- menu -->
+
+<nav id="navbar" class="navbar">
+<ul>
+  <li><a href="index.html">Inicio</a></li>
+
+  <li class="dropdown">
+    <input type="checkbox" id="toggle-personajes" hidden>
+    <label for="toggle-personajes" class="nav-link scrollto active">Personajes Históricos ▼</label>
+    
+    <ul>
+      <li class="dropdown">
+        <a href="tesla.html">Nikola Tesla</a>
+        <ul>
+          <li><a href="tesla_biografia.html">Biografía</a></li>
+          <li><a href="tesla_legado.html">Legado</a></li>
+          <li><a href="tesla_contexto.html">Contexto</a></li>
+          <li><a href="tesla_curiosidades.html">Curiosidades</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="marie.html">Marie Curie</a>
+        <ul>
+          <li><a href="marie_biografia.html">Biografía</a></li>
+          <li><a href="marie_legado.html">Legado</a></li>
+          <li><a href="marie_contexto.html">Contexto</a></li>
+          <li><a href="marie_curiosidades.html">Curiosidades</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="leonardo.html">Leonardo da Vinci</a>
+        <ul>
+          <li><a href="leonardo_biografia.html">Biografía</a></li>
+          <li><a href="leonardo_legado.html">Legado</a></li>
+          <li><a href="leonardo_contexto.html">Contexto</a></li>
+          <li><a href="leonardo_curiosidades.html">Curiosidades</a></li>
+        </ul>
+      </li>
+      
+<li class="dropdown">
+    <a href="neil.html"><span class="full-name">Neil Armstrong</span></a>
+    <ul>
+        <li><a href="neil_biografia.html">Biografía</a></li>
+        <li><a href="neil_legado.html">Legado</a></li>
+        <li><a href="neil_contexto.html">Contexto</a></li>
+        <li><a href="neil_curiosidades.html">Curiosidades</a></li>
+    </ul>
+</li>
+<li class="dropdown">
+    <a href="felipe.html"><span class="full-name">Felipe II Rey de España</span></a>
+    <ul>
+        <li><a href="felipe_biografia.html">Biografía</a></li>
+        <li><a href="felipe_legado.html">Legado</a></li>
+        <li><a href="felipe_contexto.html">Contexto</a></li>
+        <li><a href="felipe_curiosidades.html">Curiosidades</a></li>
+    </ul>
+</li>
+<li class="dropdown">
+    <a href="juan.html"><span class="full-name">Juan Pablo II</span></a>
+    <ul>
+        <li><a href="juan_biografia.html">Biografía</a></li>
+        <li><a href="juan_legado.html">Legado</a></li>
+        <li><a href="juan_contexto.html">Contexto</a></li>
+        <li><a href="juan_curiosidades.html">Curiosidades</a></li>
+    </ul>
+</li>
+</ul>
+
+  <li><a class="nav-link scrollto" href="galeria.html">Galería</a></li>
+  <li><a class="nav-link scrollto" href="creadores.html">Creadoras</a></li>
+  <li><a class="nav-link scrollto" href="contacto.html">Contacto</a></li>
+</ul>
+</nav>
+  </div>
+</header><!-- End Header -->
+
+<div class="menu-lateral close">
+  <header>
+    <span class="toggle" ></span> <!-- Flecha para abrir/cerrar -->
+  </header>
+  <ul class="menu">
+    <li>
+      <a href="#biografia">
+        <img src="/assets/img/felipe.jpg" alt="Icono Biografía">
+        <span class="text nav-text">Biografía</span>
+      </a>
+    </li>
+    <li>
+      <a href="#legado">
+        <img src="/assets/img/felipe.jpg" alt="Icono Legado">
+        <span class="text nav-text">Legado</span>
+      </a>
+    </li>
+    <li>
+      <a href="#contexto">
+        <img src="/assets/img/felipe.jpg" alt="Icono Contexto">
+        <span class="text nav-text">Contexto</span>
+      </a>
+    </li>
+    <li>
+      <a href="#curiosidades">
+        <img src="/assets/img/felipe.jpg" alt="Icono Curiosidades">
+        <span class="text nav-text">Curiosidades</span>
+      </a>
+    </li>
+  </ul>
+</div>
+</section>
+  <ul class="container">
+    <li>
+      <a href="#img1">
+      <img src="/assets/img/felipe_g.jpg" alt="felipe">
+      <div class="content">
+        <span>
+          <h2>Felipe</h2>
+         
+        </span>
+      </div>
+      </a>
+    </li>
+    <li>
+      <a href="#img2">
+      <img src="/assets/img/marie_g.jpg" alt="">
+        <div class="content">
+          <span>
+            <h2>Marie</h2>
+          </span>
+        </div>
+      </img>
+      </a>
+    </li>
+    <li>
+      <a href="#img3">
+      <img src="/assets/img/marie_g.jpg" alt="">
+        <div class="content">
+          <span>
+            <h2>Marie</h2>
+          </span>
+        </div>
+      </img>
+      </a>
+    </li>
+    </ul>
+  </section>
+     <!-- 🔹 MODAL CON CSS -->
+     <div class="lightbox" id="img1">
+      <a href="#" class="close">✖</a>
+      <a href="#img3" class="prev">&#10094;</a>
+      <img src="assets/img/marie_g.jpg" alt="Marie Curie">
+      <a href="#img2" class="next">&#10095;</a>
+  </div>
+
+  <div class="lightbox" id="img2">
+      <a href="#" class="close">✖</a>
+      <a href="#img1" class="prev">&#10094;</a>
+      <img src="/assets/img/felipe2.jpeg" alt="Rey Felipe II">
+      <a href="#img3" class="next">&#10095;</a>
+  </div>
+
+  <div class="lightbox" id="img3">
+      <a href="#" class="close">✖</a>
+      <a href="#img2" class="prev">&#10094;</a>
+      <img src="assets/img/marie_g.jpg" alt="Marie Curie">
+      <a href="#img1" class="next">&#10095;</a>
+  </div>
+  
+</body>
+</html>
