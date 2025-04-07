@@ -1,18 +1,29 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: #1e272e;
     margin: 0;
     font-family: "Open Sans", sans-serif;
     background-color: #000;
-    background:url("/assets/img/hero-bg.jpg");
+    background:url("/assets/img/hero-bg.jpg")no-repeat center center fixed;
     color: #fff;
   }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Cambiá el color y opacidad como quieras */
+    z-index: -1;
+  }
+  
 
   a {
     color: #cda45e;
@@ -43,21 +54,21 @@ body {
     box-shadow: black;
     padding: 15px;
     width: 100%;
-    height: 50px;
+    height: 75px;
     background:black; /* Temporary for debugging */
     position: relative;
     z-index: 2; 
     
   }
   #header .logo {
-    font-size: 20px; /* Fixed typo from 20x */
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 200;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
+  font-size: 20px; /* Fixed typo from 20x */
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
   }
   
   #header .logo a {
@@ -81,19 +92,20 @@ body {
   
   /* General Styles */
   .navbar {
-    max-width: 50%; /* Barra con un ancho más pequeño */
-    background: rgba(40, 37, 37, 0.5); /* Transparente estilo cristal */
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    backdrop-filter: blur(10px); /* Efecto cristal */
-    position: relative; /* Fija la barra en la parte superior */
-    top: 0;
-    left: 500px; /* Centra la barra horizontalmente */
-    z-index: 999; /* Asegura que esté por encima del resto */
+  max-width: 50%; /* Barra con un ancho más pequeño */
+  background: rgba(40, 37, 37, 0.5); /* Transparente estilo cristal */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(10px); /* Efecto cristal */
+  position: relative; /* Fija la barra en la parte superior */
+  top: 15px;
+  left: 500px; /* Centra la barra horizontalmente */
+  z-index: 999; /* Asegura que esté por encima del resto */
+ 
   }
   
   .navbar ul {
@@ -184,7 +196,7 @@ body {
   #hero {
     width: 100%;
     height: 100vh;
-    background: url("../img/hero-bg.jpg");
+    background: url("/assets/img/fondo.jpg");
     background-size:cover;
     padding: 0;
     margin: 0;
@@ -195,16 +207,18 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    margin: 0;
+    padding: 0;
     height: 100vh;
     background-color:black; /* Fondo oscuro directamente */
-    width: 70px;
+    width: 220px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: width 0.3s ease;
-    margin-top: 0px; 
-    width: 220px; /* Ancho expandido */
-    z-index: 2; 
-    display: block;
+    margin-top: -50px; 
+    width: 200px; /* Ancho expandido */
+    z-index: 1000; 
+    overflow-y: auto;
   }
   
   /* Encabezado con flecha */
@@ -236,7 +250,7 @@ body {
     color: #ffffff; /* Texto blanco para contraste en fondo oscuro */
     padding: 5px;
     transition: 0.3s;
-    margin-top: 50px;
+    margin-top: 40px;
   }
   
   .menu li a img {
@@ -270,91 +284,70 @@ body {
   .menu li a:hover img {
     border-color: #ffe8a6;
     box-shadow: 0 0 8px #ffe8a6;
+  }
+  .parent {
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 10px;
     
-  }.parent {
-   
-    transform: translate(120px);
-    margin-top: 100px;
-    margin-left: 150px; /* Para evitar que choque con el menú lateral */
-    margin-right: 100px;
   }
 
-  
   .container {
-    width: 150%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    padding: 30px;
-    max-width: 800px;
-    scale: 1;
-    opacity: 1;
-    visibility: visible;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 2fr));
+    padding: 0;
+    gap:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position:relative;
+ 
   }
-  
+
   .container li {
     overflow: hidden;
-    width: 150px; /* Ancho fijo para los elementos */
-    height: 200px; /* Altura fija */
-    border-radius: 10px;/*Bordes más redondeados */
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
     cursor: pointer;
     border: 2px solid #ddd;
     transition: transform 0.3s ease;
-    list-style: none; /* Eliminar viñetas de lista */
+    list-style: none;
+    position: relative;
   }
-  
+
   .container li:hover {
-    transform: scale(1.2); /* Pequeño zoom al pasar el mouse */
+    transform: scale(1.2);
+    z-index: 10;
   }
-  
+
   .container li img {
-    width: 100%; /* Ocupar todo el espacio del contenedor */
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin deformarse */
-    
-  }
-  
-.container li, 
-.container li img{
-    transition:0.3s;
-}
-.container li .content{
-    bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.2em;
-    transform: translateY(100%);
+    height: 100%;
+    object-fit: cover;
+  }
 
-}
-
-.container li .content{
+  .container li .content {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    background: linear-gradient(0deg, rgb(0 0 0 / 70%) 10%, rgb(255 255 255 / 0%) 100%);
     color: #ddd;
     padding: 15px;
-    background: linear-gradient(odeg,rgb(0 0 0/70%)10%,rgb(255 255 255 /0%)100%);
     opacity: 0;
     visibility: hidden;
-}
-.container:hover{
-    gap:0;
-}
+    transition: 0.3s;
+  }
 
-.container  li:hover{
-    flex:0 1 260px;
-    scale:1.1;
-    z-index: 10;
+  .container li:hover .content {
     opacity: 1;
-}
+    visibility: visible;
+  }
 
-/* 🔹 Lightbox (Modal) */
-.lightbox {
+  /* Lightbox */
+  .lightbox {
     display: none;
     position: fixed;
     top: 0;
@@ -363,49 +356,79 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     text-align: center;
-}
+    z-index: 999;
+  }
 
-.lightbox:target {
+  .lightbox:target {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
+  }
 
-/* 🔹 Imagen dentro del modal */
-.lightbox img {
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+
+  .lightbox img {
     max-width: 80%;
     max-height: 80vh;
     border-radius: 10px;
-}
+  }
 
+  .description {
+    margin-top: 20px;
+    max-width: 600px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
 
-/* 🔹 Botón Cerrar */
-.close {
+  .description h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ffd700;
+  }
+
+  .description p {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
+  .close {
     position: fixed;
     right: 30px;
     color: white;
     text-decoration: none;
-    display: block;
-    top: 0px;
-    transform: translateY(20px); 
-}
+    top: 60px;
+    z-index: 100;
+  }
 
-/* 🔹 Botones Anterior / Siguiente */
-.prev, .next {
+  .prev,
+  .next {
     position: absolute;
     top: 50%;
     font-size: 30px;
     color: white;
     text-decoration: none;
     background: none;
-}
+    transform: translateY(-50%);
+  }
 
-.prev { left: 10%; }
-.next { right: 10%; }
+  .prev {
+    left: 20%;
+  }
 
-.prev:hover, .next:hover {
+  .next {
+    right: 15%;
+  }
+
+  .prev:hover,
+  .next:hover {
     color: yellow;
-}
+  }
 
 

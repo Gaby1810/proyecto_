@@ -21,6 +21,16 @@ body {
   color: #fff;
   
 }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Cambiá el color y opacidad como quieras */
+  z-index: -1;
+}
+
 
 a {
   color: #cda45e;
