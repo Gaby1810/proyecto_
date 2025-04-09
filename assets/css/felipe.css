@@ -67,6 +67,35 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2; 
   
 }
+#header .logo {
+  font-size: 20px; /* Fixed typo from 20x */
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #462600;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+.logo .highlight {
+  color: #d4950e;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  left:100px;
+  background-color: #000;
+}
+
+
 
 /* General Styles */
 .navbar {
@@ -110,11 +139,11 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 2px 2px 4px #000;
 }
 
-.navbar .menu_principal{
+.navbar .dropdown {
   position: relative;
 }
 
-.navbar .menu_principal ul {
+.navbar .dropdown ul {
   position: absolute;
   top: 0;
   left: 0; /* Despliega a la derecha */
@@ -129,20 +158,20 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 999; /* Prioridad visual por encima de otros elementos */
 }
 
-.navbar .menu_principal:hover > ul {
+.navbar .dropdown:hover > ul {
   display: block;
   background-color: #000;
 }
 
 /* Submenú de segundo nivel ajustado */
-.navbar .menu ul li {
+.navbar .dropdown ul li {
   position: relative;
   background-color: #000;
   
   
 }
 
-.navbar .menu ul li ul {
+.navbar .dropdown ul li ul {
   top: 0;
   left: 100%; /* Asegura que el segundo submenú se despliegue a la derecha */
   
@@ -164,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
   }
 
-  .navbar .menu ul {
+  .navbar .dropdown ul {
     width: 100%;
     position: static;
     box-shadow: none;
@@ -243,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
 }
 
-.menu-lateral .menu li a .text {
+.menu-lateral.close .menu li a .text {
   opacity: 1;
   visibility: visible;
   display: block;
