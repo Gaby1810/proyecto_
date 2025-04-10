@@ -1,110 +1,128 @@
+/**
+ * Template Name: Restaurantly - v3.1.0
+ * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
-/* General Styles */
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: url("fondo1.jpg") no-repeat; /* Evita que la imagen se repita */
-  background-size: 100%; /* Ajusta el tamaño de la imagen al 50% del contenedor */
-  background-position: top -220px center; /* Coloca la imagen en la parte superior centrada */
-  color: #000;
-  margin: 0;
-  padding: 0;
-  
+  background: url("/assets/img/hero-bg.jpg") no-repeat center center/cover;
+  color: #fff;
 }
 
+a {
+  color: #cda45e;
+  text-decoration: none;
+}
 
- 
-    
-  
+a:hover {
+  color: #d9ba85;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
-  background-color: #0c0b09;
-  color: #fff;
-  padding: 10px 0;
-}
-
-#header {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   padding: 15px;
-  top: -5px;
   width: 100%;
   height: 50px;
-  min-height: 50px; 
-  margin: auto;
-  background: rgba(0, 0, 0, 0.8); 
   position: relative;
+  z-index: 2;
 }
 
-#header.header-scrolled {
-  top: 0;
-  background: rgba(0, 0, 0, 0.85);
-  height: 40px;
-  left:10px;
+#header .logo {
+  font-size: 20px;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
 }
 
+#header .logo a {
+  color: #462600;
+}
 
+#header .logo img {
+  max-height: 40px;
+}
 
+.logo .highlight {
+  color: #d4950e;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #000;
+}
 
-
-
-
-
-/* menu 1*/
-/* Estilo general */
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
 .navbar {
-  background: #000;
-  padding: 10px 40px;
+  max-width: 50%;
+  background: rgba(40, 37, 37, 0.5);
+  padding: 10px 20px;
   display: flex;
-  justify-content: end;
-  font-family: 'Georgia', serif;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  position: relative;
+  left: 500px;
+  z-index: 999;
 }
 
 .navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 10px ;
   display: flex;
-  align-items: center;
+  list-style: none;
 }
 
 .navbar li {
-  position: relative;
   margin: 0 10px;
 }
 
-/* Separadores | */
-.navbar li:not(:last-child)::after {
-  content: "|";
-  color: white;
-  margin-left: 10px;
-}
-
-/* Enlaces */
 .navbar a {
-  color: white;
-  text-decoration: none;
+  color: #ffd700;
+  text-shadow: 1px 1px 2px #000;
   font-size: 16px;
-  font-weight: normal;
- 
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
+.navbar a:hover {
+  color: #fdfcfa;
+  text-shadow: 2px 2px 4px #000;
+}
 
+.navbar .menu-principal {
+  position: relative;
+}
 
-
-/* Menú desplegable */
 .navbar .menu-principal ul {
-  display: none;
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
-  background: black;
-  padding: 10px;
-  border: 1px solid #333;
-  z-index: 1000;
-  min-width: 180px;
+  width: 200px;
+  display: none;
+  background-color: #000;
+  padding: 10px 0;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  z-index: 999;
 }
 
 .navbar .menu-principal:hover > ul {
@@ -112,113 +130,71 @@ body {
 }
 
 .navbar .menu-principal ul li {
-  margin: 5px 0;
+  background-color: #000;
+  position: relative;
 }
 
 .navbar .menu-principal ul li ul {
-  display: none;
-  position: absolute;
-  left: 100%;
   top: 0;
-}
-.navbar a:hover {
-  color: #714400;
+  left: 100%;
 }
 
-
-.navbar .menu-principal ul li:hover > ul {
-  display: block;
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") no-repeat center center/cover;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Móviles */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    
-  }
-
-  .navbar li::after {
-    content: "";
-  }
-}
-
-
-
-/* Menú lateral */
+/*--------------------------------------------------------------
+# Sidebar Menu
+--------------------------------------------------------------*/
 .menu-lateral {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  background-color: #000000; /* Fondo oscuro directamente */
-  width: 70px;
+  width: 220px;
+  height: 100vh;
+  background-color: black;
+  z-index: 2;
   overflow: hidden;
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: width 0.3s ease;
 }
 
-.menu-lateral.close {
-  width: 220px; /* Ancho expandido */
-}
-
-/* Encabezado con flecha */
 .menu-lateral header {
   display: flex;
-  align-items: center;
-  color:white;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
+  color: white;
 }
 
-.menu-lateral header .toggle {
-  font-size: 20px;
-  cursor: pointer;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-}
-
-.menu-lateral.close .toggle {
-  transform: rotate(180deg);
-}
-.menu-lateral .image-section {
-  text-align: center; /* Centra la imagen y descripción */
-  margin-top: 20px; /* Espacio entre la imagen y el menú */
-}
-
-.menu-lateral .image-section .image {
-  max-width: 100%; /* Ajusta el tamaño de la imagen para que no exceda el contenedor */
-  border-radius: 10px; /* Bordes redondeados para un estilo elegante */
-}
-
-
-
-
-/* Enlaces del menú */
-.menu-links {
-  list-style: none;
+.menu {
   padding: 0;
+  color: #f8e3b6;
+  list-style: none;
 }
 
-.menu-links li {
+.menu li {
   margin-bottom: 15px;
 }
 
-.menu-links li a {
+.menu li a {
   display: flex;
   align-items: center;
+  color: #fff;
   text-decoration: none;
-  color: #ffffff; /* Texto blanco para contraste en fondo oscuro */
-  padding: 10px;
+  padding: 5px;
+  margin-top: 50px;
   transition: 0.3s;
 }
 
-.menu-links li a img {
+.menu li a img {
   width: 40px;
   height: 40px;
   margin-right: 10px;
@@ -226,89 +202,82 @@ body {
   border: 2px solid #bf9004;
 }
 
-.menu-links li a .text {
+.menu li a .text {
   opacity: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
   visibility: hidden;
+  white-space: nowrap;
 }
 
-.menu-lateral.close .menu-links li a .text {
+.menu-lateral.close .menu li a .text {
   opacity: 1;
   visibility: visible;
+  display: block;
 }
 
-/* Hover */
-.menu-links li a:hover {
+.menu li a:hover {
   transform: scale(1.05);
-  color: #cda45e; /* Color de hover */
+  color: #cda45e;
 }
 
-.menu-links li a:hover img {
+.menu li a:hover img {
   border-color: #ffe8a6;
   box-shadow: 0 0 8px #ffe8a6;
 }
 
-
-/* Mural de información */
-
-
+/*--------------------------------------------------------------
+# Main Content Box
+--------------------------------------------------------------*/
 .div3 {
-  grid-column: span 5 / span 5;
-  grid-row: span 6 / span 6;
   background-color: #f5f5f5;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-  max-width: 900px;
-  margin: 20px auto;
-  position: relative;
-  left: 100px; /
+  max-width: 1150px;
+  margin: 25px auto 20px 150px;
+  transform: translate(120px);
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
-
+/*--------------------------------------------------------------
+# Images
+--------------------------------------------------------------*/
+.image,
+.img1,
+.img2 {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #000;
+  text-align: justify;
+  background-color: #fff;
+  padding: 15px;
+  border-left: 5px solid #412700;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
 
 .image {
-max-width: 40%;
-height: auto;
-border-radius: 5px;
-float: left; 
-margin-left: 15px; 
-margin-bottom: 15px; 
-;
-
+  max-width: 100px;
+  float: left;
+  margin-left: 15px;
 }
+
 .img1 {
-max-width: 170px; 
-height: auto;
-border-radius: 5px;
-float: right; 
-margin-left: 15px; 
-margin-bottom: 15px; 
+  max-width: 150px;
+  float: right;
 }
+
 .img2 {
-max-width: 400px; 
-height: auto;
-border-radius: 5px;
-float: right; 
-margin-left: 15px; 
-margin-bottom: 15px; 
+  max-width: 200px;
+  float: right;
 }
 
-
-
-
-
-
-#biografia.curiosidades.legado.contexto{
-  text-align: center;
-}
-
-/* Estilo para los títulos */
+/*--------------------------------------------------------------
+# Text Styling
+--------------------------------------------------------------*/
 h2 {
   font-size: 1.8em;
-  color: #bf9004;  /* Color dorado */
+  color: #bf9004;
   border-bottom: 2px solid #f8e3b6;
   padding-bottom: 5px;
   text-transform: uppercase;
@@ -321,86 +290,62 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Estilos para los párrafos */
 p {
-
   font-size: 1.2em;
-  line-height: 2; /* Incrementamos el espacio entre líneas */
-  color: #000000;
+  line-height: 2;
+  color: #000;
   text-align: justify;
-  background-color: #ffffff;
-  padding: 25px; /* Aumentamos el padding para mayor espacio interior */
+  background-color: #fff;
+  padding: 25px;
   border-left: 5px solid #ffea03;
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Espaciado adicional debajo del párrafo */
+  margin-bottom: 20px;
 }
 
-
-.img1{ font-size: 1.2em;
-line-height: 1.6;
-color: #000000;
-text-align: justify;
-background-color: #ffffff;
-padding: 15px;
-border-left: 5px solid #412700;
-border-radius: 5px;
-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-margin-bottom: 15px;}
-
-.image{font-size: 1.2em;
-line-height: 1.6;
-color: #000000;
-text-align: justify;
-background-color: #ffffff;
-padding: 15px;
-border-left: 5px solid #412700;
-border-radius: 5px;
-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-margin-bottom: 15px;}
-
-.img2{font-size: 1.2em;
-  line-height: 1.6;
-  color: #000000;
-  text-align: justify;
-  background-color: #ffffff;
-  padding: 15px;
-  border-left: 5px solid #412700;
-  border-radius: 5px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;}
-
-
-/* Botones de navegación */
-.controls {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-button {
-  padding: 10px 15px;
-  font-size: 14px;
-  background-color: #5d4037;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #3e2723;
-}
-
-body {
-    font-family: "Open Sans", sans-serif;
-    background: url("assets/img/hero-bg.jpg") top center;
-    color:black;
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
 
-  
-  
-  
+.box:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.box:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.box:nth-child(3) {
+  animation-delay: 0.10s;
+}
+
+/*--------------------------------------------------------------
+# Responsive Design
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .navbar {
+    max-width: 100%;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .navbar .menu-principal ul {
+    width: 100%;
+    position: static;
+    box-shadow: none;
+  }
+}

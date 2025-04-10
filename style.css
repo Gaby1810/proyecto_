@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: "Open Sans", sans-serif;
-    background: url("fondo1.jpg") no-repeat; /* Evita que la imagen se repita */
+    background: url("assets/img/fondo1.jpg") no-repeat; /* Evita que la imagen se repita */
     background-size: 100%; /* Ajusta el tamaño de la imagen al 50% del contenedor */
     background-position: top -220px center; /* Coloca la imagen en la parte superior centrada */
     color: #000;
@@ -48,8 +48,7 @@ body {
   
   
   
-  
-  /* Estilo general del navbar */
+ /* Estilo general del navbar */
 .navbar {
   background: #000;
   padding: 10px 40px;
@@ -71,13 +70,6 @@ body {
 .navbar li {
   position: relative;
   margin: 0 10px;
-}
-
-/* Separadores "|" entre elementos (excepto el último) */
-.navbar li:not(:last-child)::after {
-  content: "|";
-  color: white;
-  margin-left: 10px;
 }
 
 /* Enlaces del navbar */
@@ -105,6 +97,15 @@ body {
   z-index: 1000;
   min-width: 180px;
   flex-direction: column;
+  width: 100%; /* Aseguramos que el submenú ocupe todo el ancho */
+}
+
+/* Estilo de los elementos del submenú */
+.navbar .menu-principal ul li {
+  margin: 0;
+  width: 100%; 
+  padding: 5px; 
+  box-sizing: border-box; 
 }
 
 /* Mostrar submenú al hacer hover */
@@ -112,9 +113,10 @@ body {
   display: flex;
 }
 
-/* Estilo de los elementos del submenú */
-.navbar .menu-principal ul li {
-  margin: 5px 0;
+/* Mostrar sub-submenú al hacer hover en cualquier parte del elemento */
+.navbar .menu-principal ul li:hover > ul {
+  display: block;
+  width: 100%; 
 }
 
 /* Sub-submenú (segundo nivel) */
@@ -122,12 +124,7 @@ body {
   display: none;
   position: absolute;
   top: 0;
-  left: 100%;
-}
-
-/* Mostrar sub-submenú al hacer hover */
-.navbar .menu-principal ul li:hover > ul {
-  display: block;
+  left: 90%;
 }
 
 /* Responsive - Estilo para móviles */
@@ -142,14 +139,13 @@ body {
     align-items: center;
   }
 
-  /* Eliminar separadores en móviles */
+  /* En móviles no hay separadores */
   .navbar li:not(:last-child)::after {
     content: "";
     margin: 0;
   }
 }
 
-   
   .introduccion {
     display: flex;
     flex-direction: column;
@@ -180,11 +176,13 @@ body {
   
   
   h2 {
-    font-size: 2em;
-    color: #ffca2b;
-    text-align: center;
-    margin: 20px 0;
-    position: relative;
+  font-size: 2em;
+color: #ffdf75;
+text-align: center;
+margin: 20px 0;
+position: relative;
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Crea el efecto de contorno negro */
+
   }
   
   h2::after {
@@ -194,7 +192,14 @@ body {
     height: 3px;
     background-color: #f8e3b6;
     margin: 10px auto;
+    border: 1px solid black; /* Esto añade un contorno negro */
+    
   }
+
+
+
+
+
   .destacados {
     background-color: #f4f4f4;
     padding: 40px;
@@ -202,7 +207,7 @@ body {
   }
   
   .destacados h2 {
-    color: #3c3400;
+    color: #f3ebb6;
     font-size: 2.5em;
     margin-bottom: 20px;
   }
@@ -233,6 +238,10 @@ body {
     color: #000;
   }
   
+  
+
+
+
   
   
   /* Tarjetas */
@@ -353,10 +362,12 @@ body {
     background-image: url("assets/img/historicos.png");
   }
   .card:nth-child(2)::before {
-    background-image: url("map.jpg");
+    background-image: url("assets/img/map.jpg");
   }
   .card:nth-child(3)::before {
-    background-image: url("assets/img/naturaleza.png");
+
+
+    background-image: url("assets/img/mariinst.jpg");
   }
   
   /* Contenido */
@@ -398,7 +409,7 @@ body {
     background-color: #222;
   }
   .card .btn:focus {
-    outline: 1px dashed yellow;
+    outline: 1px dashed rgba(255, 153, 0, 0.349);
     outline-offset: 3px;
   }
   
