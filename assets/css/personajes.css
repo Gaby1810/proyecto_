@@ -6,15 +6,18 @@
 *{
   margin: 0;
   padding: 0;
+  
 }
 
 body {
- 
+  display: flex;
+  flex-direction: column;
+  background-color: #1e272e;
+  margin: 0;
   font-family: "Open Sans", sans-serif;
   background-color: #000;
-  background:url("assets/img/hero-bg.jpg");
+  background:url("/assets/img/hero-bg.jpg");
   color: #fff;
-  
 }
 body::before {
   content: "";
@@ -62,38 +65,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2; 
   
 }
-#header .logo {
-  font-size: 20px; /* Fixed typo from 20x */
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 200;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-}
-
-#header .logo a {
-  color: #462600;
-}
-
-#header .logo img {
-  max-height: 40px;
-}
-
-.logo .highlight {
-  color: #d4950e;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  left:100px;
-  background-color: #000;
-}
-
-
-
 /* General Styles */
-.navbar {
+.navegador {
   max-width: 50%; /* Barra con un ancho más pequeño */
   background: rgba(40, 37, 37, 0.5); /* Transparente estilo cristal */
   padding: 10px 20px;
@@ -109,18 +82,18 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 999; /* Asegura que esté por encima del resto */
 }
 
-.navbar ul {
+.navegador ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
 }
 
-.navbar li {
+.navegador li {
   margin: 0 10px;
 }
 
-.navbar a {
+.navegador a {
   color: #ffd700; /* Letras doradas */
   text-shadow: 1px 1px 2px #000; /* Contorno negro */
   text-decoration: none;
@@ -129,16 +102,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar a:hover {
+.navegador a:hover {
   color: #fdfcfa; /* Dorado más claro */
   text-shadow: 2px 2px 4px #000;
 }
 
-.navbar .dropdown {
+.navegador .menu_principal {
   position: relative;
 }
 
-.navbar .dropdown ul {
+.navegador .menu_principal ul {
   position: absolute;
   top: 0;
   left: 0; /* Despliega a la derecha */
@@ -153,28 +126,28 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 999; /* Prioridad visual por encima de otros elementos */
 }
 
-.navbar .dropdown:hover > ul {
+.navegador .menu_principal:hover > ul {
   display: block;
   background-color: #000;
 }
 
 /* Submenú de segundo nivel ajustado */
-.navbar .dropdown ul li {
+.navegador .menu_principal ul li {
   position: relative;
   background-color: #000;
   
   
 }
 
-.navbar .dropdown ul li ul {
+.navegador .menu_principal ul li ul {
   top: 0;
-  left: 100%; /* Asegura que el segundo submenú se despliegue a la derecha */
+  left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
   
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
+  .navegador {
     max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
     left: 0; /* Centra correctamente en móviles */
     flex-direction: column;
@@ -182,13 +155,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px;
   }
 
-  .navbar ul {
+  .navegador ul {
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
   }
 
-  .navbar .dropdown ul {
+  .navegador .menu_principal ul {
     width: 100%;
     position: static;
     box-shadow: none;
@@ -302,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   transform: translate(120px);
   animation: fadeIn 1s ease-in-out forwards;
-  margin-top: 25px;
+  margin-top: 1%;
   margin-left: 150px; /* Para evitar que choque con el menú lateral */
   margin-right: 100px;
 }
