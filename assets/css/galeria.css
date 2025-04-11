@@ -1,434 +1,434 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: #1e272e;
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
-    background-color: #000;
-    background:url("/assets/img/hero-bg.jpg")no-repeat center center fixed;
-    color: #fff;
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Cambiá el color y opacidad como quieras */
-    z-index: -1;
-  }
-  
-
-  a {
-    color: #cda45e;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #d9ba85;
-    text-decoration: none;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", serif;
-  }
-  
-  /*--------------------------------------------------------------
-  # Preloader
-  --------------------------------------------------------------*/
-  
-  
-  
-  /*--------------------------------------------------------------
-  
-  /*--------------------------------------------------------------
-  # Header
-  --------------------------------------------------------------*/
-  #header {
-    box-shadow: black;
-    padding: 15px;
-    width: 100%;
-    height: 75px;
-    background:black; /* Temporary for debugging */
-    position: relative;
-    z-index: 2; 
-    
-  }
-  #header .logo {
-  font-size: 20px; /* Fixed typo from 20x */
   margin: 0;
   padding: 0;
-  line-height: 1;
-  font-weight: 200;
-  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e272e;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #000;
+  background:url("/proyecto_/assets/img/hero-bg.jpg")no-repeat center center fixed;
+  color: #fff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Cambiá el color y opacidad como quieras */
+  z-index: -1;
+}
+
+
+a {
+  color: #cda45e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d9ba85;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  box-shadow: black;
+  padding: 15px;
+  width: 100%;
+  height: 75px;
+  background:black; /* Temporary for debugging */
+  position: relative;
+  z-index: 2; 
+  
+}
+#header .logo {
+font-size: 20px; /* Fixed typo from 20x */
+margin: 0;
+padding: 0;
+line-height: 1;
+font-weight: 200;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #462600;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+.logo .highlight {
+  color: #d4950e;
+  font-weight: bold;
+  font-size: 1.2em;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  }
+  left:100px;
+  background-color: #000;
+}
+
+
+
+/* General Styles */
+.navbar {
+max-width: 50%; /* Barra con un ancho más pequeño */
+background: rgba(40, 37, 37, 0.5); /* Transparente estilo cristal */
+padding: 10px 20px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+border-radius: 8px;
+backdrop-filter: blur(10px); /* Efecto cristal */
+position: relative; /* Fija la barra en la parte superior */
+top: 15px;
+left: 500px; /* Centra la barra horizontalmente */
+z-index: 999; /* Asegura que esté por encima del resto */
+
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: #ffd700; /* Letras doradas */
+  text-shadow: 1px 1px 2px #000; /* Contorno negro */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #fdfcfa; /* Dorado más claro */
+  text-shadow: 2px 2px 4px #000;
+}
+
+.navbar .dropdown {
+  position: relative;
+}
+
+.navbar .dropdown ul {
+  position: absolute;
+  top: 0;
+  left: 0; /* Despliega a la derecha */
+  width: 200px;
+  background: rgba(255, 255, 255, 0.8); /* Transparente estilo cristal */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  padding: 10px 0;
+  list-style: none;
+  display: none;
+  backdrop-filter: blur(10px);
+  z-index: 999; /* Prioridad visual por encima de otros elementos */
+}
+
+.navbar .dropdown:hover > ul {
+  display: block;
+  background-color: #000;
+}
+
+/* Submenú de segundo nivel ajustado */
+.navbar .dropdown ul li {
+  position: relative;
+  background-color: #000;
   
-  #header .logo a {
-    color: #462600;
-  }
   
-  #header .logo img {
-    max-height: 40px;
-  }
+}
+
+.navbar .dropdown ul li ul {
+  top: 0;
+  left: 100%; /* Asegura que el segundo submenú se despliegue a la derecha */
   
-  .logo .highlight {
-    color: #d4950e;
-    font-weight: bold;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    left:100px;
-    background-color: #000;
-  }
-  
-  
-  
-  /* General Styles */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .navbar {
-  max-width: 50%; /* Barra con un ancho más pequeño */
-  background: rgba(40, 37, 37, 0.5); /* Transparente estilo cristal */
-  padding: 10px 20px;
+    max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+    left: 0; /* Centra correctamente en móviles */
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .navbar .dropdown ul {
+    width: 100%;
+    position: static;
+    box-shadow: none;
+  }
+}
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("assets/img/fondo.jpg");
+  background-size:cover;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color:black; /* Fondo oscuro directamente */
+  width: 220px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease;
+  margin-top: -50px; 
+  width: 200px; /* Ancho expandido */
+  z-index: 1000; 
+  overflow-y: auto;
+}
+
+/* Encabezado con flecha */
+.menu-lateral header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  backdrop-filter: blur(10px); /* Efecto cristal */
-  position: relative; /* Fija la barra en la parte superior */
-  top: 15px;
-  left: 500px; /* Centra la barra horizontalmente */
-  z-index: 999; /* Asegura que esté por encima del resto */
- 
-  }
-  
-  .navbar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-  }
-  
-  .navbar li {
-    margin: 0 10px;
-  }
-  
-  .navbar a {
-    color: #ffd700; /* Letras doradas */
-    text-shadow: 1px 1px 2px #000; /* Contorno negro */
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .navbar a:hover {
-    color: #fdfcfa; /* Dorado más claro */
-    text-shadow: 2px 2px 4px #000;
-  }
-  
-  .navbar .dropdown {
-    position: relative;
-  }
-  
-  .navbar .dropdown ul {
-    position: absolute;
-    top: 0;
-    left: 0; /* Despliega a la derecha */
-    width: 200px;
-    background: rgba(255, 255, 255, 0.8); /* Transparente estilo cristal */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 6px;
-    padding: 10px 0;
-    list-style: none;
-    display: none;
-    backdrop-filter: blur(10px);
-    z-index: 999; /* Prioridad visual por encima de otros elementos */
-  }
-  
-  .navbar .dropdown:hover > ul {
-    display: block;
-    background-color: #000;
-  }
-  
-  /* Submenú de segundo nivel ajustado */
-  .navbar .dropdown ul li {
-    position: relative;
-    background-color: #000;
-    
-    
-  }
-  
-  .navbar .dropdown ul li ul {
-    top: 0;
-    left: 100%; /* Asegura que el segundo submenú se despliegue a la derecha */
-    
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .navbar {
-      max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
-      left: 0; /* Centra correctamente en móviles */
-      flex-direction: column;
-      align-items: flex-end;
-      padding: 15px;
-    }
-  
-    .navbar ul {
-      flex-direction: column;
-      align-items: flex-end;
-      width: 100%;
-    }
-  
-    .navbar .dropdown ul {
-      width: 100%;
-      position: static;
-      box-shadow: none;
-    }
-  }
-  #hero {
-    width: 100%;
-    height: 100vh;
-    background: url("/assets/img/fondo.jpg");
-    background-size:cover;
-    padding: 0;
-    margin: 0;
-    color: #fff;
-    font-family: "Poppins", sans-serif;
-  }
-  .menu-lateral {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-color:black; /* Fondo oscuro directamente */
-    width: 220px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: width 0.3s ease;
-    margin-top: -50px; 
-    width: 200px; /* Ancho expandido */
-    z-index: 1000; 
-    overflow-y: auto;
-  }
-  
-  /* Encabezado con flecha */
-  .menu-lateral header {
-    display: flex;
-    align-items: center;
-    color:white;
-    justify-content: space-between;
-    padding: 15px;
-  }
-  
-  
-  .menu {
-    
-    padding: 0;
-    color: #f8e3b6;
-    
-    
-  }
-  
-  .menu li {
-    margin-bottom: 15px;
-  }
-  
-  .menu li a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #ffffff; /* Texto blanco para contraste en fondo oscuro */
-    padding: 5px;
-    transition: 0.3s;
-    margin-top: 40px;
-  }
-  
-  .menu li a img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    border-radius: 50%;
-    border: 2px solid #bf9004;
-  }
-  
-  .menu li a .text {
-    opacity: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    visibility: hidden;
-  }
-  
-  .menu-lateral.close .menu li a .text {
-    opacity: 1;
-    visibility: visible;
-    display: block;
-    
-  }
-  
-  /* Hover */
-  .menu li a:hover {
-    transform: scale(1.05);
-    color: #cda45e; /* Color de hover */
-  }
-  
-  .menu li a:hover img {
-    border-color: #ffe8a6;
-    box-shadow: 0 0 8px #ffe8a6;
-  }
-  .parent {
-    margin-top: 50px;
-    margin-left: 300px;
-    margin-right: 10px;
-    
-  }
+  color:white;
+  justify-content: space-between;
+  padding: 15px;
+}
 
-  .container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 2fr));
-    padding: 0;
-    gap:10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    position:relative;
- 
-  }
 
-  .container li {
-    overflow: hidden;
-    width: 200px;
-    height: 300px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 2px solid #ddd;
-    transition: transform 0.3s ease;
-    list-style: none;
-    position: relative;
-  }
+.menu {
+  
+  padding: 0;
+  color: #f8e3b6;
+  
+  
+}
 
-  .container li:hover {
-    transform: scale(1.2);
-    z-index: 10;
-  }
+.menu li {
+  margin-bottom: 15px;
+}
 
-  .container li img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff; /* Texto blanco para contraste en fondo oscuro */
+  padding: 5px;
+  transition: 0.3s;
+  margin-top: 40px;
+}
 
-  .container li .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(0deg, rgb(0 0 0 / 70%) 10%, rgb(255 255 255 / 0%) 100%);
-    color: #ddd;
-    padding: 15px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-  }
+.menu li a img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #bf9004;
+}
 
-  .container li:hover .content {
-    opacity: 1;
-    visibility: visible;
-  }
+.menu li a .text {
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  visibility: hidden;
+}
 
-  /* Lightbox */
-  .lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    text-align: center;
-    z-index: 999;
-  }
+.menu-lateral.close .menu li a .text {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  
+}
 
-  .lightbox:target {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+/* Hover */
+.menu li a:hover {
+  transform: scale(1.05);
+  color: #cda45e; /* Color de hover */
+}
 
-  .modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    text-align: center;
-  }
+.menu li a:hover img {
+  border-color: #ffe8a6;
+  box-shadow: 0 0 8px #ffe8a6;
+}
+.parent {
+  margin-top: 50px;
+  margin-left: 300px;
+  margin-right: 10px;
+  
+}
 
-  .lightbox img {
-    max-width: 80%;
-    max-height: 80vh;
-    border-radius: 10px;
-  }
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 2fr));
+  padding: 0;
+  gap:10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position:relative;
 
-  .description {
-    margin-top: 20px;
-    max-width: 600px;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-  }
+}
 
-  .description h3 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #ffd700;
-  }
+.container li {
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease;
+  list-style: none;
+  position: relative;
+}
 
-  .description p {
-    margin-top: 10px;
-    font-size: 1em;
-  }
+.container li:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
 
-  .close {
-    position: fixed;
-    right: 30px;
-    color: white;
-    text-decoration: none;
-    top: 60px;
-    z-index: 100;
-  }
+.container li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    font-size: 30px;
-    color: white;
-    text-decoration: none;
-    background: none;
-    transform: translateY(-50%);
-  }
+.container li .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgb(0 0 0 / 70%) 10%, rgb(255 255 255 / 0%) 100%);
+  color: #ddd;
+  padding: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
 
-  .prev {
-    left: 20%;
-  }
+.container li:hover .content {
+  opacity: 1;
+  visibility: visible;
+}
 
-  .next {
-    right: 15%;
-  }
+/* Lightbox */
+.light-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  z-index: 999;
+}
 
-  .prev:hover,
-  .next:hover {
-    color: yellow;
-  }
+.light-box:target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.light-box img {
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.description {
+  margin-top: 20px;
+  max-width: 600px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.description h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #ffd700;
+}
+
+.description p {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.close {
+  position: fixed;
+  right: 30px;
+  color: white;
+  text-decoration: none;
+  top: 60px;
+  z-index: 100;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  background: none;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 20%;
+}
+
+.next {
+  right: 15%;
+}
+
+.prev:hover,
+.next:hover {
+  color: yellow;
+}
 
 
