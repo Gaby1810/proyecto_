@@ -51,47 +51,134 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  box-shadow: black;
+  background-color: #0c0b09;
+  color: #fff;
+  padding: 10px 0;
+}
+
+#header {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   padding: 15px;
+  top: -5px;
   width: 100%;
-  height: 75px;
-  background:black; /* Temporary for debugging */
+  height: 50px;
+  min-height: 50px; 
+  margin: auto;
+  background: rgba(0, 0, 0, 0.8); 
   position: relative;
-  z-index: 2; 
-  
-}
-#header .logo {
-font-size: 20px; /* Fixed typo from 20x */
-margin: 0;
-padding: 0;
-line-height: 1;
-font-weight: 200;
-letter-spacing: 1px;
-text-transform: uppercase;
-font-family: "Poppins", sans-serif;
 }
 
-#header .logo a {
-  color: #462600;
-}
-
-#header .logo img {
-  max-height: 40px;
-}
-
-.logo .highlight {
-  color: #d4950e;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  left:100px;
-  background-color: #000;
+#header.header-scrolled {
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  height: 40px;
+  left:10px;
 }
 
 
 
-/* General Styles */
+
+
+
+/* Estilo general del navbar */
 .navbar {
+background: #000;
+padding: 10px 40px;
+display: flex;
+justify-content: flex-end;
+font-family: 'Georgia', serif;
+}
+
+/* Lista del navbar */
+.navbar ul {
+list-style: none;
+padding: 0;
+margin: 0 10px;
+display: flex;
+align-items: center;
+}
+
+/* Elementos de la lista */
+.navbar li {
+position: relative;
+margin: 0 10px;
+}
+
+/* Enlaces del navbar */
+.navbar a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+font-weight: normal;
+}
+
+/* Efecto hover en los enlaces */
+.navbar a:hover {
+color: #714400;
+}
+
+/* Submenú desplegable (primer nivel) */
+.navbar .menu-principal ul {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background: black;
+padding: 10px;
+border: 1px solid #333;
+z-index: 1000;
+min-width: 180px;
+flex-direction: column;
+width: 100%; /* Aseguramos que el submenú ocupe todo el ancho */
+}
+
+/* Estilo de los elementos del submenú */
+.navbar .menu-principal ul li {
+margin: 0;
+width: 100%; 
+padding: 5px; 
+box-sizing: border-box; 
+}
+
+/* Mostrar submenú al hacer hover */
+.navbar .menu-principal:hover > ul {
+display: flex;
+}
+
+/* Mostrar sub-submenú al hacer hover en cualquier parte del elemento */
+.navbar .menu-principal ul li:hover > ul {
+display: block;
+width: 100%; 
+}
+
+/* Sub-submenú (segundo nivel) */
+.navbar .menu-principal ul li ul {
+display: none;
+position: absolute;
+top: 0;
+left: 90%;
+}
+
+/* Responsive - Estilo para móviles */
+@media (max-width: 768px) {
+.navbar {
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* En móviles no hay separadores */
+.navbar li:not(:last-child)::after {
+  content: "";
+  margin: 0;
+}
+}
+/* General Styles */
+.navegador {
 max-width: 50%; /* Barra con un ancho más pequeño */
 background: rgba(40, 37, 37, 0.5); /* Transparente estilo cristal */
 padding: 10px 20px;
@@ -102,96 +189,95 @@ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 border-radius: 8px;
 backdrop-filter: blur(10px); /* Efecto cristal */
 position: relative; /* Fija la barra en la parte superior */
-top: 15px;
+top: 0;
 left: 500px; /* Centra la barra horizontalmente */
 z-index: 999; /* Asegura que esté por encima del resto */
-
 }
 
-.navbar ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
+.navegador ul {
+margin: 0;
+padding: 0;
+list-style: none;
+display: flex;
 }
 
-.navbar li {
-  margin: 0 10px;
+.navegador li {
+margin: 0 10px;
 }
 
-.navbar a {
-  color: #ffd700; /* Letras doradas */
-  text-shadow: 1px 1px 2px #000; /* Contorno negro */
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
+.navegador a {
+color: #ffd700; /* Letras doradas */
+text-shadow: 1px 1px 2px #000; /* Contorno negro */
+text-decoration: none;
+font-size: 16px;
+font-weight: bold;
+transition: all 0.3s ease-in-out;
 }
 
-.navbar a:hover {
-  color: #fdfcfa; /* Dorado más claro */
-  text-shadow: 2px 2px 4px #000;
+.navegador a:hover {
+color: #fdfcfa; /* Dorado más claro */
+text-shadow: 2px 2px 4px #000;
 }
 
-.navbar .dropdown {
-  position: relative;
+.navegador .menu_principal {
+position: relative;
 }
 
-.navbar .dropdown ul {
-  position: absolute;
-  top: 0;
-  left: 0; /* Despliega a la derecha */
-  width: 200px;
-  background: rgba(255, 255, 255, 0.8); /* Transparente estilo cristal */
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 6px;
-  padding: 10px 0;
-  list-style: none;
-  display: none;
-  backdrop-filter: blur(10px);
-  z-index: 999; /* Prioridad visual por encima de otros elementos */
+.navegador .menu_principal ul {
+position: absolute;
+top: 0;
+left: 0; /* Despliega a la derecha */
+width: 200px;
+background: rgba(255, 255, 255, 0.8); /* Transparente estilo cristal */
+box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+border-radius: 6px;
+padding: 10px 0;
+list-style: none;
+display: none;
+backdrop-filter: blur(10px);
+z-index: 999; /* Prioridad visual por encima de otros elementos */
 }
 
-.navbar .dropdown:hover > ul {
-  display: block;
-  background-color: #000;
+.navegador .menu_principal:hover > ul {
+display: block;
+background-color: #000;
 }
 
 /* Submenú de segundo nivel ajustado */
-.navbar .dropdown ul li {
-  position: relative;
-  background-color: #000;
-  
-  
+.navegador .menu_principal ul li {
+position: relative;
+background-color: #000;
+
+
 }
 
-.navbar .dropdown ul li ul {
-  top: 0;
-  left: 100%; /* Asegura que el segundo submenú se despliegue a la derecha */
-  
+.navegador .menu_principal ul li ul {
+top: 0;
+left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
+
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
-    max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
-    left: 0; /* Centra correctamente en móviles */
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 15px;
-  }
+.navegador {
+  max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+  left: 0; /* Centra correctamente en móviles */
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 15px;
+}
 
-  .navbar ul {
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-  }
+.navegador ul {
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
 
-  .navbar .dropdown ul {
-    width: 100%;
-    position: static;
-    box-shadow: none;
-  }
+.navegador .menu_principal ul {
+  width: 100%;
+  position: static;
+  box-shadow: none;
+}
 }
 #hero {
   width: 100%;
@@ -374,8 +460,12 @@ z-index: 999; /* Asegura que esté por encima del resto */
 }
 
 .light-box img {
-  max-width: 80%;
-  max-height: 80vh;
+  border-radius: 5%;
+  width: 40%;
+  height: 90%;
+  object-fit: contain;
+
+  border: 5px solid rgb(0, 0, 0);
   border-radius: 10px;
 }
 
