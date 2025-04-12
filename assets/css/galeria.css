@@ -447,6 +447,25 @@ left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
   border-radius: 10px;
 }
 
+.description {
+  margin-top: 20px;
+  max-width: 600px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.description h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #ffd700;
+}
+
+.description p {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
 
 .close {
   position: fixed;
