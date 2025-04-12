@@ -10,7 +10,7 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   background-color: #000;
-  background:url("/proyecto_/assets/img/hero-bg.jpg")no-repeat center center fixed;
+  background:url("/assets/img/hero-bg.jpg")no-repeat center center fixed;
   color: #fff;
 }
 

@@ -355,7 +355,7 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   
   /* Imagenes específicas */
   .card:nth-child(1)::before {
-    background-image: url("/proyecto_/assets/img/historicos.png");
+    background-image: url("/assets/img/historicos.png");
   }
   .card:nth-child(2)::before {
     background-image: url("/proyecto_/assets/img/map.jpg");
