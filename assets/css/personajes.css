@@ -1,20 +1,26 @@
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 *{
   margin: 0;
   padding: 0;
+  
 }
 
 body {
-  display: flex;
+  display:flexbox;
   flex-direction: column;
   background-color: #1e272e;
   margin: 0;
+  padding: 0;
   font-family: "Open Sans", sans-serif;
   background-color: #000;
-  background:url("/proyecto_/assets/img/hero-bg.jpg");
+  background:url("/proyecto_/assets/img/hero-bg.jpg")no-repeat center center fixed;
   color: #fff;
+  
+  
 }
 
 body::before {
@@ -52,31 +58,30 @@ h1, h2, h3, h4, h5, h6 {
  /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
- 
-#header {
-  background-color: #0c0b09;
-  color: #fff;
-  padding: 1% 0; 
-}
- 
-#header {
-  box-shadow: 0px 0.5% 0.10% rgba(0, 0, 0, 0.2); 
-  padding: 1.5%;
-  top: -0.5%; 
-  width: 100%;
-  height: 5%; 
-  min-height: 5%; 
-  margin: auto;
-  background: rgba(0, 0, 0, 0.8); 
-  position: relative;
-}
- 
-#header.header-scrolled {
-  top: 0;
-  background: rgba(0, 0, 0, 0.85);
-  height: 4%;
-  left: 1%; 
-}
+  #header {
+    background-color: #0c0b09;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  #header {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    top: -5px;
+    width: 100%;
+    height: 50px;
+    min-height: 50px; 
+    margin: auto;
+    background: rgba(0, 0, 0, 0.8); 
+    position: relative;
+  }
+  
+  #header.header-scrolled {
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    height: 40px;
+    left:10px;
+  }
   
 /* Estilo general del navbar */
 .barra {
@@ -112,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Efecto hover en los enlaces */
 .barra a:hover {
-  color: #714400;
+  color: #f4cd57;
 }
 
 /* Submenú desplegable (primer nivel) */
@@ -160,18 +165,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive - Estilo para móviles */
 @media (max-width: 768px) {
-  .navbar {
+  .barra{
     flex-direction: column;
     align-items: center;
   }
 
-  .navbar ul {
+  .barra ul {
     flex-direction: column;
     align-items: center;
   }
 
   /* En móviles no hay separadores */
-  .navbar li:not(:last-child)::after {
+  .barra li:not(:last-child)::after {
     content: "";
     margin: 0;
   }
@@ -380,8 +385,8 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(12%); 
   animation: fadeIn 1s ease-in-out forwards;
   margin-top: 1%;
-  margin-left: 15%; 
-  margin-right: 10%; 
+  margin-left: 150px; /* Para evitar que choque con el menú lateral */
+  margin-right: 100px;
 }
 
 .image {

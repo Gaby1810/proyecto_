@@ -76,7 +76,7 @@ body {
 .navbar a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 100%;
   font-weight: normal;
 }
 
@@ -92,19 +92,19 @@ body {
   top: 100%;
   left: 0;
   background: black;
-  padding: 10px;
-  border: 1px solid #333;
+  padding: 5%;
+  border: 1% solid #333;
   z-index: 1000;
-  min-width: 180px;
+  min-width: 130%;
   flex-direction: column;
-  width: 100%; /* Aseguramos que el submenú ocupe todo el ancho */
+  width: 100%; 
 }
 
 /* Estilo de los elementos del submenú */
 .navbar .menu-principal ul li {
   margin: 0;
-  width: 100%; 
-  padding: 5px; 
+  width: 50%; 
+  padding: 5%; 
   box-sizing: border-box; 
 }
 
@@ -116,7 +116,7 @@ body {
 /* Mostrar sub-submenú al hacer hover en cualquier parte del elemento */
 .navbar .menu-principal ul li:hover > ul {
   display: block;
-  width: 100%; 
+  width: 50%; 
 }
 
 /* Sub-submenú (segundo nivel) */
@@ -128,7 +128,7 @@ body {
 }
 
 /* Responsive - Estilo para móviles */
-@media (max-width: 768px) {
+@media (max-width: 768%) {
   .navbar {
     flex-direction: column;
     align-items: center;

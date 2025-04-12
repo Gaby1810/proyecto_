@@ -4,99 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>galeria</title>
-    
-  <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/favicon.png" rel="icon">
     <link rel="stylesheet" href="assets\css\galeria.css">
 </head>
 <body>
-  
-  
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-cente">
-  <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-
+  <!-- ======= Header ======= -->
+<header id="header" class="barra">
+    <div class="container1">
     <h1 class="logo">
-
-</h1>
-<!-- menu -->
-
-<nav id="navbar" class="navbar">
-<ul>
-  <li><a href="index.html">Inicio</a></li>
-
-  <li class="menu-principal">
-    <input type="checkbox" id="toggle-personajes" hidden>
-    <label for="toggle-personajes" class="nav-link scrollto active">Personajes Históricos ▼</label>
-    
+</h1>  
+  <nav id="barra" class="barra">
     <ul>
+      <li><a href="index.html">Inicio</a></li>
+
+      <!-- Menú desplegable -->
       <li class="menu-principal">
-        <a href="tesla.html">Nikola Tesla</a>
-        <ul>
-          <li><a href="tesla_biografia.html">Biografía</a></li>
-          <li><a href="tesla_legado.html">Legado</a></li>
-          <li><a href="tesla_contexto.html">Contexto</a></li>
-          <li><a href="tesla_curiosidades.html">Curiosidades</a></li>
+        <input type="checkbox" id="personajes" hidden>
+        <label for="personajes" class="nav">Personajes Históricos ▼</label>
+    <ul>
+          <li class="menu-principal">
+            <a>Nikola Tesla</a>
+            <ul>
+              <li><a href="nikolas_biografia.html">Biografía</a></li>
+              <li><a href="nikolas_legado.html">Legado</a></li>
+              <li><a href="nikolas_curiosidades.html">Curiosidades</a></li>
+            </ul>
+          </li>
+  
+          <li class="menu-principal">
+            <a>Marie Curie</a>
+            <ul>
+              <li><a href="marie_biografia.html">Biografía</a></li>
+              <li><a href="marie_legado.html">Legado</a></li>
+              <li><a href="marie_curiosidades.html">Curiosidades</a></li>
+            </ul>
+          </li>
+  
+          <li class="menu-principal">
+            <a>Leonardo da Vinci</a>
+            <ul>
+              <li><a href="leonardo_biografia.html">Biografía</a></li>
+              <li><a href="leonardo_legado.html">Legado</a></li>
+              <li><a href="leonardo_curiosidades.html">Curiosidades</a></li>
+            </ul>
+          </li>
+  
+          <li class="menu-principal">
+            <a><span class="full-name">Neil Armstrong</span></a>
+            <ul>
+              <li><a href="neil_biografia.html">Biografía</a></li>
+              <li><a href="neil_legado.html">Legado</a></li>
+              <li><a href="neil_curiosidades.html">Curiosidades</a></li>
+            </ul>
+          </li>
+  
+          <li class="menu-principal">
+            <a><span class="full-name">Felipe II Rey de España</span></a>
+            <ul>
+              <li><a href="felipe_biografia.html">Biografía</a></li>
+              <li><a href="felipe_legado.html">Legado</a></li>
+              <li><a href="felipe_curiosidades.html">Curiosidades</a></li>
+            </ul>
+          </li>
+  
+          <li class="menu-principal">
+            <a><span class="full-name">Juan Pablo II</span></a>
+            <ul>
+              <li><a href="juan_biografia.html">Biografía</a></li>
+              <li><a href="juan_legado.html">Legado</a></li>
+              <li><a href="juan_curiosidades.html">Curiosidades</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
-      <li class="menu-principal">
-        <a href="marie.html">Marie Curie</a>
-        <ul>
-          <li><a href="marie_biografia.html">Biografía</a></li>
-          <li><a href="marie_legado.html">Legado</a></li>
-          <li><a href="marie_contexto.html">Contexto</a></li>
-          <li><a href="marie_curiosidades.html">Curiosidades</a></li>
-        </ul>
-      </li>
-      <li class="menu-principal">
-        <a href="leonardo.html">Leonardo da Vinci</a>
-        <ul>
-          <li><a href="leonardo_biografia.html">Biografía</a></li>
-          <li><a href="leonardo_legado.html">Legado</a></li>
-          <li><a href="leonardo_contexto.html">Contexto</a></li>
-          <li><a href="leonardo_curiosidades.html">Curiosidades</a></li>
-        </ul>
-      </li>
-      
-<li class="menu-principal">
-    <a href="neil.html"><span class="full-name">Neil Armstrong</span></a>
-    <ul>
-        <li><a href="neil_biografia.html">Biografía</a></li>
-        <li><a href="neil_legado.html">Legado</a></li>
-        <li><a href="neil_contexto.html">Contexto</a></li>
-        <li><a href="neil_curiosidades.html">Curiosidades</a></li>
+  
+      <li><a class="nav" href="galeria.html">Galería</a></li>
+      <li><a class="nav" href="creadores.html">Creadoras</a></li>
+      <li><a class="nav" href="contacto.html">Contacto</a></li>
     </ul>
-</li>
-<li class="menu-principal">
-    <a href="felipe.html"><span class="full-name">Felipe II Rey de España</span></a>
-    <ul>
-        <li><a href="felipe_biografia.html">Biografía</a></li>
-        <li><a href="felipe_legado.html">Legado</a></li>
-        <li><a href="felipe_contexto.html">Contexto</a></li>
-        <li><a href="felipe_curiosidades.html">Curiosidades</a></li>
-    </ul>
-</li>
-<li class="menu-principal">
-    <a href="juan.html"><span class="full-name">Juan Pablo II</span></a>
-    <ul>
-        <li><a href="juan_biografia.html">Biografía</a></li>
-        <li><a href="juan_legado.html">Legado</a></li>
-        <li><a href="juan_contexto.html">Contexto</a></li>
-        <li><a href="juan_curiosidades.html">Curiosidades</a></li>
-    </ul>
-</li>
-</ul>
-
-  <li><a class="nav-link scrollto" href="galeria.html">Galería</a></li>
-  <li><a class="nav-link scrollto" href="creadores.html">Creadoras</a></li>
-  <li><a class="nav-link scrollto" href="contacto.html">Contacto</a></li>
-</ul>
-</nav>
+  </nav>
+  
   </div>
-</header><!-- End Header -->
-
+  </header>
+  
+  <!-- Segundo menu--> 
 <div class="menu-lateral close">
   <header>
-    <span class="toggle" ></span> <!-- Flecha para abrir/cerrar -->
+    <span class="toggle" ></span> 
   </header>
   <ul class="menu">
     <li>
@@ -106,27 +100,40 @@
       </a>
     </li>
     <li>
-      <a href="#legado">
-        <img src="assets/img/felipe.jpg" alt="Icono Legado">
+      <a href="#juan">
+        <img src="assets/img/juan_pablo8.jpeg" alt="Icono Legado">
         <span class="text nav-text">Juan Pablo II </span>
       </a>
     </li>
     <li>
-      <a href="#contexto">
-        <img src="assets/img/felipe.jpg" alt="Icono Contexto">
-        <span class="text nav-text">Contexto</span>
+      <a href="#marie">
+        <img src="assets/img/marie_curie1.jpg" alt="Icono Contexto">
+        <span class="text nav-text">Marie Curie</span>
       </a>
     </li>
     <li>
-      <a href="#curiosidades">
-        <img src="assets/img/felipe.jpg" alt="Icono Curiosidades">
-        <span class="text nav-text">Curiosidades</span>
+      <a href="#leonardo">
+        <img src="assets/img/Leonardo01.jpg" alt="Icono Curiosidades">
+        <span class="text nav-text">Leonardo Davinci</span>
+      </a>
+    </li>
+    <li>
+      <a href="#nikolas">
+        <img src="assets/img/nicolas6.jpg" alt="Icono Curiosidades">
+        <span class="text nav-text">Nikolas Tesla</span>
+      </a>
+    </li>
+    <li>
+      <a href="#neil">
+        <img src="assets/img/neil4.jpeg" alt="Icono Curiosidades">
+        <span class="text nav-text">Neil Armstrong</span>
       </a>
     </li>
   </ul>
 </div>
 </section>
-<!-- Primer grupo: Felipe II -->
+
+<!--  Felipe II -->
 <div class="parent">
   <section id="felipe">
     <ul class="container">
@@ -163,7 +170,8 @@
     </ul>
   </section>
 
-  <!-- Segundo grupo: Juan Pablo II -->
+  <!--  Juan Pablo II -->
+    <section id="juan">
   <ul class="container">
     <li>
       <a href="#img6">
@@ -196,8 +204,10 @@
       </a>
     </li>
   </ul>
+</section>
 
-  <!-- Tercer grupo: Marie Curie -->
+  <!--  Marie Curie -->
+  <section id="marie">
   <ul class="container">
     <li>
       <a href="#img11">
@@ -230,295 +240,303 @@
       </a>
     </li>
   </ul>
-  
+</section>
+
   <!-- Tercer grupo: Marie Curie -->
+   <section id="leonardo">
   <ul class="container">
     <li>
       <a href="#img16">
         <img src="assets/img/leonardo_1.jpg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>Leonardo Da Vinci</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img17">
         <img src="assets/img/leonardo_2.jpeg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>Leonardo Da Vinci</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img18">
         <img src="assets/img/leonardo_3.jpg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>Leonardo Da Vinci</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img19">
         <img src="assets/img/leonardo4_.jpg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>Leonardo Da Vinci</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img20">
         <img src="assets/img/leonardo5_.jpg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>Leonardo Da Vinci</h2></span></div>
       </a>
     </li>
   </ul>
-  
+</section>
+
   <!-- Tercer grupo: Marie Curie -->
+   <section id="nikolas">
   <ul class="container">
     <li>
       <a href="#img21">
         <img src="assets/img/nicolas1.jpeg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>NiKolas Tesla</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img22">
         <img src="assets/img/nicolas2.jpeg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>NiKolas Tesla</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img23">
         <img src="assets/img/nicolas3.png" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>NiKolas Tesla</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img24">
         <img src="assets/img/nicolas4.jpg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>NiKolas Tesla</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img25">
         <img src="assets/img/nicolas6.jpg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>NiKolas Tesla</h2></span></div>
       </a>
     </li>
   </ul>
-  
+</section>
+
   <!-- Tercer grupo: Marie Curie -->
+   <section id="neil">
   <ul class="container">
     <li>
       <a href="#img26">
         <img src="assets/img/neil.jpg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>neil armstrong</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img27">
         <img src="assets/img/neil1.jpeg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>neil armstrong</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img28">
         <img src="assets/img/neil2.jpeg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>neil armstrong</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img29">
         <img src="assets/img/neil3.jpg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>neil armstrong</h2></span></div>
       </a>
     </li>
     <li>
       <a href="#img30">
         <img src="assets/img/neil4.jpeg" alt="Marie Curie">
-        <div class="content"><span><h2>Marie Curie</h2></span></div>
+        <div class="content"><span><h2>neil armstrong</h2></span></div>
       </a>
     </li>
   </ul>
 </div>
+</section>
 
 <!-- Lightbox navegables encadenados -->
-<article class="light-box" id="img1">
-  <a href="#img15" class="next"><</a>
+<div class="galeria">
+<article class="personajes" id="img1">
+  <a href="#img30" class="prev">&#10094;</a>
   <img src="assets/img/felipe_g.jpg">
-  <a href="#img2" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img2" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img2">
-  <a href="#img1" class="next"><</a>
+<article class="personajes" id="img2">
+  <a href="#img1" class="prev">&#10094;</a>
   <img src="assets/img/felipe.jpg">
-  <a href="#img3" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img3" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img3">
-  <a href="#img2" class="next"><</a>
+<article class="personajes" id="img3">
+  <a href="#img2" class="prev">&#10094;</a>
   <img src="assets/img/felipe2.jpeg">
-  <a href="#img4" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img4" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img4">
-  <a href="#img3" class="next"><</a>
+<article class="personajes" id="img4">
+  <a href="#img3" class="prev">&#10094;</a>
   <img src="assets/img/felipe3.jpg">
-  <a href="#img5" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img5" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img5">
-  <a href="#img4" class="next"><</a>
+<article class="personajes" id="img5">
+  <a href="#img4" class="prev">&#10094;</a>
   <img src="assets/img/felipe4.jpeg">
-  <a href="#img6" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img6" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-
-<article class="light-box" id="img6">
-  <a href="#img5" class="next"><</a>
+</div> 
+<article class="personajes" id="img6">
+  <a href="#img5" class="prev">&#10094;</a>
   <img src="assets/img/juan_pablo.jpg">
-  <a href="#img7" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img7" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img7">
-  <a href="#img6" class="next"><</a>
+<article class="personajes" id="img7">
+  <a href="#img6" class="prev">&#10094;</a>
   <img src="assets/img/juan_pablo1.jpeg">
-  <a href="#img8" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img8" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img8">
-  <a href="#img7" class="next"><</a>
+<article class="personajes" id="img8">
+  <a href="#img7" class="prev">&#10094;</a>
   <img src="assets/img/juan_pablo2.jpg">
-  <a href="#img9" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img9" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img9">
-  <a href="#img8" class="next"><</a>
+<article class="personajes" id="img9">
+  <a href="#img8" class="prev">&#10094;</a>
   <img src="assets/img/juan_pablo3.jpg">
-  <a href="#img10" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img10" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img10">
-  <a href="#img9" class="next"><</a>
+<article class="personajes" id="img10">
+  <a href="#img9" class="prev">&#10094;</a>
   <img src="assets/img/juan_pablo4.jpg">
-  <a href="#img11" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img11" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
 
-<article class="light-box" id="img11">
-  <a href="#img10" class="next"><</a>
+<article class="personajes" id="img11">
+  <a href="#img10" class="prev">&#10094;</a>
   <img src="assets/img/marie_curie.jpg">
-  <a href="#img12" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img12" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img12">
-  <a href="#img11" class="next"><</a>
+<article class="personajes" id="img12">
+  <a href="#img11" class="prev">&#10094;</a>
   <img src="assets/img/marie_curie1.jpg">
-  <a href="#img13" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img13" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img13">
-  <a href="#img12" class="next"><</a>
+<article class="personajes" id="img13">
+  <a href="#img12" class="prev">&#10094;</a>
   <img src="assets/img/marie_g.jpg">
-  <a href="#img14" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img14" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img14">
-  <a href="#img13" class="next"><</a>
+<article class="personajes" id="img14">
+  <a href="#img13" class="prev">&#10094;</a>
   <img src="assets/img/marie_curie3.jpg">
-  <a href="#img15" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img15" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img15">
-  <a href="#img14" class="next"><</a>
+<article class="personajes" id="img15">
+  <a href="#img14" class="prev">&#10094;</a>
   <img src="assets/img/marie_curie5.jpg">
-  <a href="#img1" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img16" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
 
-<article class="light-box" id="img16">
-  <a href="#img20" class="next"><</a>
+<article class="personajes" id="img16">
+  <a href="#img15" class="prev">&#10094;</a>
   <img src="assets/img/leonardo_1.jpg">
-  <a href="#img17" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img17" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img17">
-  <a href="#img16" class="next"><</a>
+<article class="personajes" id="img17">
+  <a href="#img16" class="prev">&#10094;</a>
   <img src="assets/img/leonardo_2.jpeg">
-  <a href="#img18" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img18" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img18">
-  <a href="#img17" class="next"><</a>
+<article class="personajes" id="img18">
+  <a href="#img17" class="prev">&#10094;</a>
   <img src="assets/img/leonardo_3.jpg">
-  <a href="#img19" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img19" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img19">
-  <a href="#img18" class="next"><</a>
+<article class="personajes" id="img19">
+  <a href="#img18" class="prev">&#10094;</a>
   <img src="assets/img/leonardo4_.jpg">
-  <a href="#img20" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img20" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img20">
-  <a href="#img19" class="next"><</a>
+<article class="personajes" id="img20">
+  <a href="#img19" class="prev">&#10094;</a>
   <img src="assets/img/leonardo5_.jpg">
-  <a href="#img15" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img21" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
 
-<article class="light-box" id="img21">
-  <a href="#img25" class="next"><</a>
+<article class="personajes" id="img21">
+  <a href="#img25" class="prev">&#10094;</a>
   <img src="assets/img/nicolas1.jpeg">
-  <a href="#img22" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img22" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img22">
-  <a href="#img21" class="next"><</a>
+<article class="personajes" id="img22">
+  <a href="#img21" class="prev">&#10094;</a>
   <img src="assets/img/nicolas2.jpeg">
-  <a href="#img23" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img23" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img23">
-  <a href="#img22" class="next"><</a>
+<article class="personajes" id="img23">
+  <a href="#img22" class="prev">&#10094;</a>
   <img src="assets/img/nicolas3.png">
-  <a href="#img24" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img24" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img24">
-  <a href="#img23" class="next"><</a>
+<article class="personajes" id="img24">
+  <a href="#img23" class="prev">&#10094;</a>
   <img src="assets/img/nicolas4.jpg">
-  <a href="#img25" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img25" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img25">
-  <a href="#img24" class="next"><</a>
+<article class="personajes" id="img25">
+  <a href="#img24" class="prev">&#10094;</a>
   <img src="assets/img/nicolas6.jpg">
-  <a href="#img16" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img26" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
 
-<article class="light-box" id="img26">
-  <a href="#img30" class="next"><</a>
+<article class="personajes" id="img26">
+  <a href="#img30" class="prev">&#10094;</a>
   <img src="assets/img/neil.jpg">
-  <a href="#img27" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img27" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img27">
-  <a href="#img26" class="next"><</a>
+<article class="personajes" id="img27">
+  <a href="#img26" class="prev">&#10094;</a>
   <img src="assets/img/neil1.jpeg">
-  <a href="#img28" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img28" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img28">
-  <a href="#img27" class="next"><</a>
+<article class="personajes" id="img28">
+  <a href="#img27" class="prev">&#10094;</a>
   <img src="assets/img/neil2.jpeg">
-  <a href="#img29" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img29" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img29">
-  <a href="#img28" class="next"><</a>
+<article class="personajes" id="img29">
+  <a href="#img28" class="prev">&#10094;</a>
   <img src="assets/img/neil3.jpg">
-  <a href="#img30" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img30" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
-<article class="light-box" id="img30">
-  <a href="#img29" class="next"><</a>
+<article class="personajes" id="img30">
+  <a href="#img29" class="prev">&#10094;</a>
   <img src="assets/img/neil4.jpeg">
-  <a href="#img25" class="next">></a>
-  <a href="#felipe" class="close">X</a>
+  <a href="#img1" class="next">&#10095;</a>
+  <a href="#galeria" class="close">X</a>
 </article>
 </section>
 </body>
