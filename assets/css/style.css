@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: "Open Sans", sans-serif;
-    background: url("/proyecto_/assets/img/fondo.jpg") no-repeat; /* Evita que la imagen se repita */
+    background: (url(../img/fondo1.jpg))no-repeat; /* Evita que la imagen se repita */
     background-size: 100%; /* Ajusta el tamaño de la imagen al 50% del contenedor */
     background-position: top -220px center; /* Coloca la imagen en la parte superior centrada */
     color: #000;
@@ -355,15 +355,15 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   
   /* Imagenes específicas */
   .card:nth-child(1)::before {
-    background-image: url("/assets/img/historicos.png");
+    background-image: ( url(../img/historicos.png));
   }
   .card:nth-child(2)::before {
-    background-image: url("/proyecto_/assets/img/map.jpg");
+    background-image: (url(../img/mariinst.jpg));
   }
   .card:nth-child(3)::before {
 
 
-    background-image: url("/proyecto_/assets/img/mariinst.jpg");
+    background-image: (url(../img/mariinst.jpg));
   }
   
   /* Contenido */
