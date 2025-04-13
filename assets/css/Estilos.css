@@ -5,7 +5,7 @@ body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
     background-color: #000;
-    background:url("/assets/img/hero-bg.jpg")no-repeat center center fixed;
+    background: image-set(url(../img/hero-bg.jpg)) no-repeat; 
     color: #fff;
   }
   
