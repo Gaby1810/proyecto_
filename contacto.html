@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Personajes Historicos</title>
+    <link href="assets/css/Estilos.css" rel="stylesheet">
+</head>
+
+<body>
+ <!-- ======= Header ======= -->
+ <header id="header" class="barra">
+  <div class="container1">
+  <h1 class="logo">
+</h1>  
+<nav id="barra" class="barra">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+
+    <!-- Menú desplegable -->
+    <li class="menu-principal">
+      <input type="checkbox" id="personajes" hidden>
+      <label for="personajes" class="nav">Personajes Históricos ▼</label>
+  <ul>
+        <li class="menu-principal">
+          <a>Nikola Tesla</a>
+          <ul>
+            <li><a href="nikolas_biografia.html">Biografía</a></li>
+            <li><a href="nikolas_legado.html">Legado</a></li>
+            <li><a href="nikolas_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <a>Marie Curie</a>
+          <ul>
+            <li><a href="marie_biografia.html">Biografía</a></li>
+            <li><a href="marie_legado.html">Legado</a></li>
+            <li><a href="marie_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <a>Leonardo da Vinci</a>
+          <ul>
+            <li><a href="leonardo_biografia.html">Biografía</a></li>
+            <li><a href="leonardo_legado.html">Legado</a></li>
+            <li><a href="leonardo_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <a><span class="full-name">Neil Armstrong</span></a>
+          <ul>
+            <li><a href="neil_biografia.html">Biografía</a></li>
+            <li><a href="neil_legado.html">Legado</a></li>
+            <li><a href="neil_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <a><span class="full-name">Felipe II Rey de España</span></a>
+          <ul>
+            <li><a href="felipe_biografia.html">Biografía</a></li>
+            <li><a href="felipe_legado.html">Legado</a></li>
+            <li><a href="felipe_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <a><span class="full-name">Juan Pablo II</span></a>
+          <ul>
+            <li><a href="juan_biografia.html">Biografía</a></li>
+            <li><a href="juan_legado.html">Legado</a></li>
+            <li><a href="juan_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><a class="nav" href="galeria.html">Galería</a></li>
+    <li><a class="nav" href="creadoras.html">Creadoras</a></li>
+    <li><a class="nav" href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+</div>
+</header>
+    <!-- =======personajes introduccion ======= -->
+    <div class="introduccion">
+        <h1>Personajes Historicos</h1>
+    </div>
+
+    <section class="destacados">
+        <h2>Contactenos</h2>
+        <form id="login" action="Form" method="post">
+          <input type="text" id="nombre" value="" pattern="^[a-zA-Z\s]+$" title="Solo se acepta letras"
+              class="control" placeholder="Nombre" required />
+            <br>
+          <input type="tel" id="telefono" value="" pattern="^[0-9]{4}-?[0-9]{4}$"
+              title="Solo acepta números en el siguiente formato: 2222-2222" class="control"
+              placeholder="Número de teléfono" required />
+            <br>
+          <input type="text" id="mensaje" value="" pattern="^[a-zA-Z\s]+$" title="Envianos tu mensaje"
+              class="control" placeholder="Mensaje" required />    
+            <br>
+          <input type="email" id="correo" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+              title="Formato de correo: NombreCorreo@dominio" class="control" placeholder="Correo Electrónico"
+              required />
+            <br>
+          <input type="text" id="pais" value="" pattern="^[a-zA-Z\s]+$" title="Solo se acepta letras"
+              title="Ingrese su país"
+              class="control" placeholder="País" required />
+            <br>
+          <button class="boton" type="submit">Mandar datos</button>
+
+        </form>
+        <br>
+
+    </section>
+
+</body>
+
+<footer>Proyecto UDB Personajes Historicos</footer>
+
+</html>

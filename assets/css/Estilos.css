@@ -1,0 +1,327 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #1e272e;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    background-color: #000;
+    background: image-set(url(../img/hero-bg.jpg)) no-repeat; 
+    color: #fff;
+  }
+  
+  
+    #header {
+    background-color: #0c0b09;
+    color: #fff;
+    padding: 10px 0;
+    }
+    
+    #header {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    top: -5px;
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    }
+    
+    #header.header-scrolled {
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    height: 40px;
+    left:10px;
+    }
+  
+    
+/* Estilo para la barra de navegacion */
+.barra {
+  background: #000;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Georgia', serif;
+}
+
+
+.barra ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+
+.barra li {
+  position: relative;
+  margin: 0 10px;
+}
+
+
+.barra a {
+  color: white;
+  text-decoration: none;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+
+.barra a:hover {
+  color: #d39c4b;
+}
+
+/* Submenú desplegable (primer nivel) */
+.barra .menu-principal ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: black;
+  padding: 5%;
+  border: 1% solid #333;
+  z-index: 1000;
+  min-width: 130%;
+  flex-direction: column;
+  width: 100%; 
+}
+
+
+.barra .menu-principal ul li {
+  margin: 0;
+  width: 50%; 
+  padding: 5%; 
+  box-sizing: border-box; 
+}
+
+
+.barra .menu-principal:hover > ul {
+  display: flex;
+}
+
+
+.barra .menu-principal ul li:hover > ul {
+  display: block;
+  width: 50%; 
+}
+
+
+.barra .menu-principal ul li ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 90%;
+}
+
+/* Responsive - Estilo para móviles */
+@media (max-width: 768%) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* En móviles no hay separadores */
+  .navbar li:not(:last-child)::after {
+    content: "";
+    margin: 0;
+  }
+}
+/* estilos generales*/
+.navegador {
+max-width: 50%; 
+background: rgba(40, 37, 37, 0.5); 
+padding:0;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+box-shadow: 0px 4% 8% rgba(0, 0, 0, 0.2);
+border-radius: 8%;
+backdrop-filter: blur(10px); 
+position: relative; 
+top: 0;
+left: 500%; 
+z-index: 999; 
+}
+
+.navegador ul {
+margin: 0;
+padding: 0;
+list-style: none;
+display: flex;
+}
+
+.navegador li {
+margin: 0 10px;
+}
+
+.navegador a {
+color: #ffd700; 
+text-shadow: 1% 1% 2% #000;
+text-decoration: none;
+font-size: 16%;
+font-weight: bold;
+transition: all 0.3s ease-in-out;
+}
+
+.navegador a:hover {
+color: #fdfcfa; 
+text-shadow: 2% 2% 4% #000;
+}
+
+.navegador .menu_principal {
+position: relative;
+}
+
+.navegador .menu_principal ul {
+position: absolute;
+top: 0;
+left: 0; 
+width: 200%;
+background: rgba(255, 255, 255, 0.8); 
+box-shadow: 0 6% 15% rgba(0, 0, 0, 0.3);
+border-radius: 6px;
+padding: 10px 0;
+list-style: none;
+display: none;
+backdrop-filter: blur(10%);
+z-index: 999; 
+}
+
+.navegador .menu_principal:hover > ul {
+display: block;
+background-color: #000;
+}
+
+/* Submenú de segundo nivel ajustado */
+.navegador .menu_principal ul li {
+position: relative;
+background-color: #000;
+
+
+}
+
+.navegador .menu_principal ul li ul {
+top: 0;
+left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.navegador {
+  max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+  left: 0; /* Centra correctamente en móviles */
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 15%;
+}
+
+.navegador ul {
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.navegador .menu_principal ul {
+  width: 100%;
+  position: static;
+  box-shadow: none;
+}
+}
+    
+    .introduccion {
+    display: flex;
+    flex-direction: column;
+    top: 90px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8e3b6;
+    padding: 30px;
+    border-radius: 10px;
+    
+    max-width: 800px;
+    height: 30px;
+    margin: 80px auto;
+    text-align: center; /* Alinea el texto hacia la derecha */
+    font-family: 'Arial', sans-serif; /* Cambia el tipo de letra */
+    }
+    
+    .introduccion h1 {
+    color: #3c3400;
+    margin-bottom: 10px;
+    height: -20px;
+    top: -50px; /* Reduce más el valor para subir el texto */
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', serif;
+    }
+     
+    #login input {
+    font-family: 'Times New Roman', serif;
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+    margin: 10px;
+    }
+  
+    .control {
+    padding-left: 45px;
+    font-size: 18px;
+    }
+    
+    .boton {
+    font-family: "Open Sans", sans-serif;
+    background-color: #b68945;
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    color: #000000;
+    margin-top: 3px;
+    }
+    
+    h2 {
+    font-size: 2em;
+    color: #ffdf75;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Crea el efecto de contorno negro */
+    
+    }
+    
+    h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #f8e3b6;
+    margin: 10px auto;
+    border: 1px solid black; /* Esto añade un contorno negro */
+    
+    }
+    
+    .destacados {
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+    }
+    
+    footer {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 110%;
+    z-index: 1000;
+    left: -35px;
+    }
