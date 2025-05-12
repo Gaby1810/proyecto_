@@ -44,11 +44,7 @@ body {
   
   
   
-<<<<<<< HEAD
  
-=======
- /* Estilo general del navbar */
->>>>>>> ae626570370ae730b6ddf9f5263bc7d1215c6d80
 .navbar {
   background: #000;
   padding: 10px 40px;
@@ -57,7 +53,6 @@ body {
   font-family: 'Georgia', serif;
 }
 
-<<<<<<< HEAD
 /* Oculta el menú por defecto en móviles */
 #menuhambur:checked ~ ul {
   display: flex;
@@ -69,38 +64,22 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-=======
-/* Lista del navbar */
-.navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 10px;
->>>>>>> ae626570370ae730b6ddf9f5263bc7d1215c6d80
   display: flex;
   align-items: center;
 }
 
-<<<<<<< HEAD
-=======
-/* Elementos de la lista */
->>>>>>> ae626570370ae730b6ddf9f5263bc7d1215c6d80
 .navbar li {
   position: relative;
   margin: 0 10px;
 }
 
 /* Enlaces del navbar */
-<<<<<<< HEAD
 .navbar a,
 .navbar label.nav-link {
-=======
-.navbar a {
->>>>>>> ae626570370ae730b6ddf9f5263bc7d1215c6d80
   color: white;
   text-decoration: none;
   font-size: 100%;
   font-weight: normal;
-<<<<<<< HEAD
   cursor: pointer;
 }
 
@@ -111,23 +90,12 @@ body {
 }
 
 /* Submenús ocultos por defecto */
-=======
-}
-
-/* Efecto hover en los enlaces */
-.navbar a:hover {
-  color: #714400;
-}
-
-/* Submenú desplegable (primer nivel) */
->>>>>>> ae626570370ae730b6ddf9f5263bc7d1215c6d80
 .navbar .menu-principal ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: black;
-<<<<<<< HEAD
   padding: 10px 0;
   border: 1px solid #333;
   z-index: 1000;
@@ -136,41 +104,10 @@ body {
 }
 
 /* Sub-submenús */
-=======
-  padding: 5%;
-  border: 1% solid #333;
-  z-index: 1000;
-  min-width: 130%;
-  flex-direction: column;
-  width: 100%; 
-}
-
-/* Estilo de los elementos del submenú */
-.navbar .menu-principal ul li {
-  margin: 0;
-  width: 50%; 
-  padding: 5%; 
-  box-sizing: border-box; 
-}
-
-/* Mostrar submenú al hacer hover */
-.navbar .menu-principal:hover > ul {
-  display: flex;
-}
-
-/* Mostrar sub-submenú al hacer hover en cualquier parte del elemento */
-.navbar .menu-principal ul li:hover > ul {
-  display: block;
-  width: 50%; 
-}
-
-/* Sub-submenú (segundo nivel) */
->>>>>>> ae626570370ae730b6ddf9f5263bc7d1215c6d80
 .navbar .menu-principal ul li ul {
   display: none;
   position: absolute;
   top: 0;
-<<<<<<< HEAD
   left: 100%;
 }
 
@@ -326,58 +263,6 @@ body {
 }
 
 
-=======
-  left: 90%;
-}
-
-/* Responsive - Estilo para móviles */
-@media (max-width: 768%) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* En móviles no hay separadores */
-  .navbar li:not(:last-child)::after {
-    content: "";
-    margin: 0;
-  }
-}
-
-  .introduccion {
-    display: flex;
-    flex-direction: column;
-    top: 90px;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8e3b6;
-    padding: 30px;
-    border-radius: 10px;
-   
-    max-width: 800px;
-    height: 30px;
-    margin: 80px auto;
-    text-align: center; /* Alinea el texto hacia la derecha */
-    font-family: 'Arial', sans-serif; /* Cambia el tipo de letra */
-  }
-  
-  .introduccion h1 {
-    color: #3c3400;
-    margin-bottom: 10px;
-  height: -20px;
-    top: -50px; /* Reduce más el valor para subir el texto */
-    text-align: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    font-family: 'Times New Roman', serif;
-  }
-  
-  
->>>>>>> ae626570370ae730b6ddf9f5263bc7d1215c6d80
   
   h2 {
   font-size: 2em;
@@ -404,7 +289,6 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
 
 
-<<<<<<< HEAD
   /* Estilo para los videos verticales tipo TikTok */
 .video-vertical {
   width: 100%; /* Para que ocupe el ancho disponible */
@@ -446,49 +330,6 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   margin-top: 5px;
   color: #bbb;
 }
-=======
-  .destacados {
-    background-color: #f4f4f4;
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .destacados h2 {
-    color: #f3ebb6;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  .grid-destacados {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .personaje {
-    background: #ffffff;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  
-  .personaje h3 {
-    font-size: 1.8em;
-    color: #ffca2b;
-    margin: 15px 0;
-  }
-  
-  .personaje p {
-    font-size: 1.2em;
-    color: #000;
-  }
-  
-  
-
-
->>>>>>> ae626570370ae730b6ddf9f5263bc7d1215c6d80
 
   
   
@@ -760,3 +601,4 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
       left: -35px;
   }
   
+
