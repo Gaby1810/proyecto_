@@ -34,33 +34,41 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
-#header {
-  background-color: #0c0b09;
-  color: #fff;
-  padding: 10% 0;
-}
-#header {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  padding:15px;
-  top: 0;
-  width: 100%;
-  height: 50%;
-  min-height: 50%; 
-  margin: auto;
-  background: rgba(0, 0, 0, 0.9); 
-  position:relative;
+/*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  #header {
+    background-color: #0c0b09;
+    color: #fff;
+    padding: 10px 0;
+     z-index: 1000; /* Debe estar siempre visible */
+   position: sticky; 
+    }
   
-}
+  #header {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    top: -5px;
+    width: 100%;
+    height: 50px;
+    min-height: 50px; 
+    margin: auto;
+    background: rgba(0, 0, 0, 0.8); 
+    position: relative;
+  }
+  
+  #header.header-scrolled {
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    height: 40px;
+    left:10px;
+    
+  }
+  
+  
 
-#header.header-nav {
-  top: 0;
-  background: rgba(0, 0, 0, 0.85);
-  height: 40%;
-  left:10%;
-}
-
-/* Estilo para la barra de navegacion */
-.barra {
+ 
+.navbar {
   background: #000;
   padding: 10px 40px;
   display: flex;
@@ -68,212 +76,139 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Georgia', serif;
 }
 
+/* Oculta el menú por defecto en móviles */
+#menuhambur:checked ~ ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-.barra ul {
+.navbar ul {
   list-style: none;
   padding: 0;
-  margin: 0 10px;
+  margin: 0;
   display: flex;
   align-items: center;
 }
 
-
-.barra li {
+.navbar li {
   position: relative;
   margin: 0 10px;
 }
 
-
-.barra a {
+/* Enlaces del navbar */
+.navbar a,
+.navbar label.nav-link {
   color: white;
   text-decoration: none;
   font-size: 100%;
   font-weight: normal;
+  cursor: pointer;
 }
 
-
-.barra a:hover {
-  color: #d39c4b;
+/* Efecto hover */
+.navbar a:hover,
+.navbar label.nav-link:hover {
+  color: #714400;
 }
 
-/* Submenú desplegable (primer nivel) */
-.barra .menu-principal ul {
+/* Submenús ocultos por defecto */
+.navbar .menu-principal ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: black;
-  padding: 5%;
-  border: 1% solid #333;
+  padding: 10px 0;
+  border: 1px solid #333;
   z-index: 1000;
-  min-width: 130%;
+  min-width: 200px;
   flex-direction: column;
-  width: 100%; 
 }
 
-
-.barra .menu-principal ul li {
-  margin: 0;
-  width: 50%; 
-  padding: 5%; 
-  box-sizing: border-box; 
-}
-
-
-.barra .menu-principal:hover > ul {
-  display: flex;
-}
-
-
-.barra .menu-principal ul li:hover > ul {
-  display: block;
-  width: 50%; 
-}
-
-
-.barra .menu-principal ul li ul {
+/* Sub-submenús */
+.navbar .menu-principal ul li ul {
   display: none;
   position: absolute;
   top: 0;
-  left: 90%;
+  left: 100%;
 }
 
-/* Responsive - Estilo para móviles */
-@media (max-width: 768%) {
+/* Mostrar submenú al hacer hover en desktop */
+@media (min-width: 769px) {
+  .menu-principal:hover > ul {
+    display: flex;
+  }
+
+  .menu-principal ul li:hover > ul {
+    display: block;
+  }
+
+  #menuhambur,
+  .navbar label[for="menuhambur"] {
+    display: none;
+  }
+}
+/* Responsive - Estilo para móviles y tablets */
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .navbar ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* En móviles no hay separadores */
-  .navbar li:not(:last-child)::after {
-    content: "";
-    margin: 0;
-  }
-}
-
-/* estilos generales*/
-.navegador {
-  max-width: 50%; 
-  background: rgba(40, 37, 37, 0.5); 
-  padding:0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  box-shadow: 0px 4% 8% rgba(0, 0, 0, 0.2);
-  border-radius: 8%;
-  backdrop-filter: blur(10px); 
-  position: relative; 
-  top: 0;
-  left: 500%; 
-  z-index: 999; 
-  }
-  
-  .navegador ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  }
-  
-  .navegador li {
-  margin: 0 10px;
-  }
-  
-  .navegador a {
-  color: #ffd700; 
-  text-shadow: 1% 1% 2% #000;
-  text-decoration: none;
-  font-size: 16%;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-  }
-  
-  .navegador a:hover {
-  color: #fdfcfa; 
-  text-shadow: 2% 2% 4% #000;
-  }
-  
-  .navegador .menu_principal {
-  position: relative;
-  }
-  
-  .navegador .menu_principal ul {
-  position: absolute;
-  top: 0;
-  left: 0; 
-  width: 200%;
-  background: rgba(255, 255, 255, 0.8); 
-  box-shadow: 0 6% 15% rgba(0, 0, 0, 0.3);
-  border-radius: 6px;
-  padding: 10px 0;
-  list-style: none;
-  display: none;
-  backdrop-filter: blur(10%);
-  z-index: 999; 
-  }
-  
-  .navegador .menu_principal:hover > ul {
-  display: block;
-  background-color: #000;
-  }
-  
-  /* Submenú de segundo nivel ajustado */
-  .navegador .menu_principal ul li {
-  position: relative;
-  background-color: #000;
-  
-  
-  }
-  
-  .navegador .menu_principal ul li ul {
-  top: 0;
-  left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
-  
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-  .navegador {
-    max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
-    left: 0; /* Centra correctamente en móviles */
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 15%;
-  }
-  
-  .navegador ul {
-    flex-direction: column;
-    align-items: flex-end;
+    display: none;
     width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
   }
-  
-  .navegador .menu_principal ul {
-    width: 100%;
-    position: static;
-    box-shadow: none;
-  }
-}
 
-#hero {
-  width: 100%;
-  height: 100vh; /* Ya es un porcentaje del alto del viewport */
-  background: url("../img/hero-bg.jpg");
-  background-size:cover;
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+  .navbar li {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .navbar .menu-principal ul {
+    position: relative;
+    top: auto;
+    left: auto;
+    border: none;
+    padding-left: 20px;
+    background: none;
+    min-width: unset;
+  }
+
+  .navbar .menu-principal ul li ul {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+
+  .navbar label.nav-link {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .navbar .menu-principal > input:checked + label + ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar .menu-principal ul li > input:checked + a + ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar svg {
+    fill: white;
+    cursor: pointer;
+  }
 }
 
 .menu-lateral {
   position: fixed;
-  top: 0;
+  top: 10%;
   left: 0;
   height: 100%; /* Ya es un porcentaje del alto del viewport */
   background-color: black; /* Fondo oscuro directamente */
@@ -282,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.2);
   transition: width 0.3s ease;
   margin-top: 0; 
-  z-index: 2; 
+  z-index: 10; 
   display: block;
 }
 
@@ -365,6 +300,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 25px;
   margin-left: 15%; /* Para evitar que choque con el menú lateral */
   margin-right: 10%;
+  
 }
 
 

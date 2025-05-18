@@ -6,93 +6,108 @@
   <title>Personajes Historicos</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <link href="assets/img/Logo.png" rel="icon">
-  <link rel="stylesheet "href="assets/css/Personajes.css" >
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/css/personajes.css" rel="stylesheet">
+
 </head>
 <body>
-        <!-- ======= Header ======= -->
-<header id="header" class="barra">
-  <div class="container">
-    <h1 class="logo">
-</h1>
-     
-  <nav id="barra" class="barra">
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-  
-      <!-- Menú desplegable -->
-      <li class="menu-principal">
-        <input type="checkbox" id="toggle-personajes" hidden>
-        <label for="toggle-personajes" class="nav-link scrollto active">Personajes Históricos ▼</label>
-  
-        <ul>
-          <li class="menu-principal">
-            <a>Nikola Tesla</a>
-            <ul>
-              <li><a href="nikolas_biografia.html">Biografía</a></li>
-              <li><a href="nikolas_legado.html">Legado</a></li>
-              <li><a href="nikolas_curiosidades.html">Curiosidades</a></li>
-            </ul>
-          </li>
-  
-          <li class="menu-principal">
-            <a>Marie Curie</a>
-            <ul>
-              <li><a href="marie_biografia.html">Biografía</a></li>
-              <li><a href="marie_legado.html">Legado</a></li>
-              <li><a href="marie_curiosidades.html">Curiosidades</a></li>
-            </ul>
-          </li>
-  
-          <li class="menu-principal">
-            <a>Leonardo da Vinci</a>
-            <ul>
-              <li><a href="leonardo_biografia.html">Biografía</a></li>
-              <li><a href="leonardo_legado.html">Legado</a></li>
-              <li><a href="leonardo_curiosidades.html">Curiosidades</a></li>
-            </ul>
-          </li>
-  
-          <li class="menu-principal">
-            <a><span class="full-name">Neil Armstrong</span></a>
-            <ul>
-              <li><a href="neil_biografia.html">Biografía</a></li>
-              <li><a href="neil_legado.html">Legado</a></li>
-              <li><a href="neil_curiosidades.html">Curiosidades</a></li>
-            </ul>
-          </li>
-  
-          <li class="menu-principal">
-            <a><span class="full-name">Felipe II Rey de España</span></a>
-            <ul>
-              <li><a href="felipe_biografia.html">Biografía</a></li>
-              <li><a href="felipe_legado.html">Legado</a></li>
-              <li><a href="felipe_curiosidades.html">Curiosidades</a></li>
-            </ul>
-          </li>
-  
-          <li class="menu-principal">
-            <a><span class="full-name">Juan Pablo II</span></a>
-            <ul>
-              <li><a href="juan_biografia.html">Biografía</a></li>
-              <li><a href="juan_legado.html">Legado</a></li>
-              <li><a href="juan_curiosidades.html">Curiosidades</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-  
-      <li><a class="nav-link scrollto" href="galeria.html">Galería</a></li>
-      <li><a class="nav-link scrollto" href="creadoras.html">Creadoras</a></li>
-      <li><a class="nav-link scrollto" href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-  
-  </div>
-  </header><!-- End Header -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo"></h1>
+<nav class="navbar">
+  <!-- Menú hamburguesa -->
+  <label for="menuhambur">
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+    </svg>
+  </label>
+  <input type="checkbox" id="menuhambur" hidden>
+
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+
+    <!-- Menú desplegable principal -->
+    <li class="menu-principal">
+      <input type="checkbox" id="toggle-personajes" hidden>
+      <label for="toggle-personajes" class="nav-link">Personajes Históricos ▼</label>
+      <ul>
+        <!-- Submenús por personaje -->
+        <li class="menu-principal">
+          <input type="checkbox" id="tesla-sub" hidden>
+          <a href="nikolas_biografia.html">Nikola Tesla</a>
+          <ul>
+            <li><a href="nikolas_biografia.html">Biografía</a></li>
+            <li><a href="nikolas_legado.html">Legado</a></li>
+            <li><a href="neil_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <input type="checkbox" id="curie-sub" hidden>
+          <a href="marie_biografia.html">Marie Curie</a>
+          <ul>
+            <li><a href="marie_biografia.html">Biografía</a></li>
+            <li><a href="marie_legado.html">Legado</a></li>
+            <li><a href="marie_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <input type="checkbox" id="leonardo-sub" hidden>
+          <a href="leonardo_biografia.html">Leonardo da Vinci</a>
+          <ul>
+            <li><a href="leonardo_biografia.html">Biografía</a></li>
+            <li><a href="leonardo_legado.html">Legado</a></li>
+            <li><a href="leonardo_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <input type="checkbox" id="neil-sub" hidden>
+          <a href="neil_biografia.html"><span class="full-name">Neil Armstrong</span></a>
+          <ul>
+            <li><a href="neil_biografia.html">Biografía</a></li>
+            <li><a href="neil_legado.html">Legado</a></li>
+            <li><a href="neil_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <input type="checkbox" id="felipe-sub" hidden>
+          <a href="felipe_biografia.html"><span class="full-name">Felipe II Rey de España</span></a>
+          <ul>
+            <li><a href="felipe_biografia.html">Biografía</a></li>
+            <li><a href="felipe_legado.html">Legado</a></li>
+            <li><a href="felipe_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-principal">
+          <input type="checkbox" id="juan-sub" hidden>
+          <a href="juan_biografia.html"><span class="full-name">Juan Pablo II</span></a>
+          <ul>
+            <li><a href="juan_biografia.html">Biografía</a></li>
+            <li><a href="juan_legado.html">Legado</a></li>
+            <li><a href="juan_curiosidades.html">Curiosidades</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="creadoras.html">Creadoras</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+</header><!-- End Header -->
 
   <div class="menu-lateral close">
     <header>
+      <span class="toggle" ></span> <!-- Flecha para abrir/cerrar -->
+    </header>
       <span class="toggle" ></span> <!-- Flecha para abrir/cerrar -->
     </header>
     <ul class="menu">
