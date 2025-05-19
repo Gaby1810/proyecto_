@@ -6,10 +6,8 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: #1e272e;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: #000;
   background: image-set(url(../img/hero-bg.jpg)) no-repeat center center fixed;
   color: #fff;
 }
