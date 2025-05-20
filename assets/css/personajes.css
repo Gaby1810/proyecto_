@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   
   #header {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 50px 0px 50px rgba(0, 0, 0, 0.2);
     padding: 15px;
     top: -4px;
     width: 100%;
@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   #header.header-scrolled { 
-    top: 0;
+    top: 0px;
     background: rgba(0, 0, 0, 0.85);
     height: 40px;
     left:10px;
@@ -203,6 +203,10 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
   }
 }
+/*--------------------------------------------------------------
+  # End Header
+  --------------------------------------------------------------*/
+
 .menu-lateral.close .menu li a .text {
   opacity: 0;
   visibility: hidden;
@@ -220,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.2);
   transition: width 0.3s ease;
-  margin-top: 0; 
+  margin-top: 80; 
   z-index: 10; 
   display: block;
 }
@@ -251,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff; /* Texto blanco para contraste en fondo oscuro */
   padding: 10%; 
   transition: 0.3s;
-  margin-top: 15%; 
+  margin-top: 20%; 
 }
 
 .menu li a img {
@@ -284,6 +288,8 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #ffe8a6;
   box-shadow: 0 0 8px #ffe8a6;
 }
+
+
 
 /* Mural de información */
  
@@ -421,4 +427,28 @@ margin-bottom: 15px;}
 }
 .box:nth-child(3) {
     animation-delay: 0.10s;
+}
+@media (max-width: 768px) {
+  .menu-lateral {
+    transform: translateX(-100%);
+    width: 30%; 
+    transition: transform 0.3s ease;
+  }
+
+  #toggle-sidebar:checked ~ .menu-lateral {
+    transform: translateX(0);
+  }
+
+  .toggle-btn {
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    background: #000;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 1001;
+    cursor: pointer;
+    border-radius: 5px;
+  }
 }

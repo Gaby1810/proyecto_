@@ -289,6 +289,9 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   
 }
+.menu li a {
+   margin-top: 25%;
+}
 
 
 .menu li a:hover {
@@ -549,5 +552,28 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
+@media (max-width: 768px) {
+  .menu-lateral {
+    transform: translateX(-100%);
+    width: 30%; 
+    transition: transform 0.3s ease;
+  }
 
+  #toggle-sidebar:checked ~ .menu-lateral {
+    transform: translateX(0);
+  }
+
+  .toggle-btn {
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    background: #000;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 1001;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
 
