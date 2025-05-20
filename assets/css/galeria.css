@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 body {
   display: flex;
@@ -10,7 +11,7 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   background-color: #000;
-  background: image-set(url(../img/hero-bg.jpg)) no-repeat; 
+  background: image-set(url(../img/hero-bg.jpg)) no-repeat center center fixed;
   color: #fff;
 }
 
@@ -259,6 +260,20 @@ left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
   box-shadow: none;
 }
 }
+
+.navegador .menu_principal ul li {
+  position: relative;
+  background-color: #000;
+  
+  
+  }
+  
+  .navegador .menu_principal ul li ul {
+  top: 0;
+  left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
+  
+  }
+  
 #hero {
   width: 100%;
   height: 100%;
@@ -350,23 +365,23 @@ left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
   border-color: #ffe8a6;
   box-shadow: 0 0 8% #ffe8a6;
 }
+
 .parent {
   margin-top: 5%;
   margin-left: 20%;
   margin-right: 10%;
   
 }
-
-.container {
+/*Container de la galeria de imagenes */
+.container{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   padding: 0;
   gap:10px;
   margin-left: 10px;
   margin-right: 10px;
   position:relative;
-
 }
 
 .container li {
@@ -376,42 +391,96 @@ left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
   border-radius: 5%;
   cursor: pointer;
   border: 2% solid #ddd;
-  transition: transform 0.3s ease;
   list-style: none;
   position: relative;
 }
 
 .container li:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   z-index: 10;
 }
 
 .container li img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+ width: 100%;
+  height: 300px;
+  object-fit: cover; /* recorta la imagen para que se vea uniforme */
 }
 
 .container li .content {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: linear-gradient(0deg, rgb(0 0 0 / 70%) 10%, rgb(255 255 255 / 0%) 100%);
-  color: #ddd;
-  padding: 10%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
+  padding: 15px;
+  color: #fff;
   opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .container li:hover .content {
   opacity: 1;
   visibility: visible;
+   transform: scale(1.08);
+  transition: transform 0.4s ease-in-out;
 }
 
-/* personajes */
+/*creadoras*/
+.creadoras{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  padding: 0;
+  gap:50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position:relative;
+}
+
+.creadoras li {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  cursor: pointer;
+  border: 2% solid #ddd;
+  list-style: none;
+  position: relative;
+}
+
+.creadoras li:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.creadoras li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.creadoras li .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
+  padding: 15px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.creadoras li:hover .content {
+  opacity: 1;
+  visibility: visible;
+   transform: scale(1.08);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* efectos de galeria de imagenes de personajes */
 .personajes{
   display: none;
   position: fixed;
@@ -422,6 +491,7 @@ left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
   background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
   z-index: 999;
+  flex-direction: column;
 }
 
 .personajes:target {
@@ -441,24 +511,26 @@ left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
 .personajes img {
   border-radius: 5%;
   width: 40%;
-  height: 90%;
+  height: 80%;
   object-fit: contain;
   border: 5% solid rgb(0, 0, 0);
   border-radius: 10px;
 }
 
 .description {
-  margin-top: 20px;
-  max-width: 600px;
-  padding: 15px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
   background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
   border-radius: 10px;
+  max-width: 90%;
 }
 
 .description h3 {
   margin: 0;
   font-size: 1.5em;
-  color: #ffd700;
+  color: #ffffff;
 }
 
 .description p {
@@ -485,6 +557,7 @@ left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
   text-decoration: none;
   background: none;
   transform: translateY(-50%);
+  
 }
 
 .prev {
@@ -497,7 +570,49 @@ left: 110%; /* Asegura que el segundo submenú se despliegue a la derecha */
 
 .prev:hover,
 .next:hover {
-  color: yellow;
+  color: rgb(247, 247, 237);
+}
+
+.container li .btn-ver-mas {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+ 
+}
+
+.container:hover .btn-ver-mas {
+  opacity: 1;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+/*botones de creadoras */
+.creadoras li .btn-ver-mas {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+ 
+}
+
+.creadoras :hover .btn-ver-mas {
+  opacity: 1;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 

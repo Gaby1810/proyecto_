@@ -6,10 +6,8 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: #1e272e;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: #000;
   background: image-set(url(../img/hero-bg.jpg)) no-repeat center center fixed;
   color: #fff;
 }
@@ -36,39 +34,33 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
-/*--------------------------------------------------------------
-  # Header
-  --------------------------------------------------------------*/
-  #header {
-    background-color: #0c0b09;
-    color: #fff;
-    padding: 20px 0;
-     z-index: 1000; /* Debe estar siempre visible */
-   position: sticky; 
-    }
+#header {
+  background-color: #0c0b09;
+  color: #fff;
+  padding: 10% 0;
+}
+#header {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding:15px;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  min-height: 50%; 
+  margin: auto;
+  background: rgba(0, 0, 0, 0.9); 
+  position:relative;
   
-  #header {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    top: -4px;
-    width: 100%;
-    height: 70px;
-    min-height: 50px; 
-    margin: auto;
-    background: rgba(0, 0, 0, 0.8); 
-    position: sticky;
-  }
-  
-  #header.header-scrolled { 
-    top: 0;
-    background: rgba(0, 0, 0, 0.85);
-    height: 40px;
-    left:10px;
-    
-  }
- 
+}
 
-.navbar {
+#header.header-nav {
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  height: 40%;
+  left:10%;
+}
+
+/* Estilo para la barra de navegacion */
+.barra {
   background: #000;
   padding: 10px 40px;
   display: flex;
@@ -96,8 +88,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 10px;
 }
 
-/* Enlaces del navbar */
-.navbar a,.navbar label.nav-link {
+
+.barra a {
   color: white;
   text-decoration: none;
   font-size: 100%;
@@ -105,9 +97,9 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* Efecto hover */
-.navbar a:hover,.navbar label.nav-link:hover {
-  color: #714400;
+
+.barra a:hover {
+  color: #d39c4b;
 }
 
 /* Submenús ocultos por defecto */
@@ -203,10 +195,16 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
   }
 }
-.menu-lateral.close .menu li a .text {
-  opacity: 0;
-  visibility: hidden;
-  display: none;
+
+#hero {
+  width: 100%;
+  height: 100vh; /* Ya es un porcentaje del alto del viewport */
+  background: url("../img/hero-bg.jpg");
+  background-size:cover;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
 }
 
 
