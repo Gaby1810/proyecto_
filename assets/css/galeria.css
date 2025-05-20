@@ -418,6 +418,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.4s ease-in-out;
 }
 
+
+
 /* efectos de galeria de imagenes de personajes */
 .personajes{
   display: none;
@@ -429,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
   z-index: 999;
-  flex-direction: column;
+ 
 }
 
 .personajes:target {
@@ -457,12 +459,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .description {
   color: #fff;
-  text-align: center;
-  margin-top: 10px;
+  text-align:justify;
+  margin-top: 5px;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
+  padding: 0px;
   border-radius: 10px;
-  max-width: 90%;
+  max-width: 30%;
 }
 
 .description h3 {
@@ -484,13 +486,14 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   top: 60px;
   z-index: 100;
+   font-size: 100%;
 }
 
 .prev,
 .next {
   position: absolute;
   top: 50%;
-  font-size: 110%;
+  font-size: 100%;
   color: white;
   text-decoration: none;
   background: none;
@@ -499,11 +502,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prev {
-  left: 20%;
+  left: 5%;
 }
 
 .next {
-  right: 15%;
+  right: 3%;
 }
 
 .prev:hover,
