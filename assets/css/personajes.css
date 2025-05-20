@@ -20,7 +20,7 @@ body::before {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75); 
+  background-color: rgba(2, 2, 2, 0.75); 
 }
 
 a {
@@ -42,34 +42,32 @@ h1, h2, h3, h4, h5, h6 {
   #header {
     background-color: #0c0b09;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
      z-index: 1000; /* Debe estar siempre visible */
    position: sticky; 
     }
   
   #header {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
     padding: 15px;
-    top: -5px;
+    top: -4px;
     width: 100%;
-    height: 50px;
+    height: 70px;
     min-height: 50px; 
     margin: auto;
     background: rgba(0, 0, 0, 0.8); 
-    position: relative;
+    position: sticky;
   }
   
-  #header.header-scrolled {
+  #header.header-scrolled { 
     top: 0;
     background: rgba(0, 0, 0, 0.85);
     height: 40px;
     left:10px;
     
   }
-  
-  
-
  
+
 .navbar {
   background: #000;
   padding: 10px 40px;
@@ -90,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
+  align-items:center;
 }
 
 .navbar li {
@@ -99,8 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Enlaces del navbar */
-.navbar a,
-.navbar label.nav-link {
+.navbar a,.navbar label.nav-link {
   color: white;
   text-decoration: none;
   font-size: 100%;
@@ -109,8 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Efecto hover */
-.navbar a:hover,
-.navbar label.nav-link:hover {
+.navbar a:hover,.navbar label.nav-link:hover {
   color: #714400;
 }
 
@@ -207,6 +203,12 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
   }
 }
+.menu-lateral.close .menu li a .text {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
 
 .menu-lateral {
   position: fixed;
