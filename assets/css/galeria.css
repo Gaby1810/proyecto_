@@ -2,14 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 body {
   display: flex;
   flex-direction: column;
-  background-color: #1e272e;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: #000;
   background: image-set(url(../img/hero-bg.jpg)) no-repeat center center fixed;
   color: #fff;
 }
@@ -39,26 +38,27 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
-  #header {
-    background-color: #0c0b09;
-    color: #fff;
-    padding: 20px 0;
-     z-index: 1000; /* Debe estar siempre visible */
-   position: sticky; 
-    }
+#header {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding:15px 0;
+  top: -4px;
+  width: 100%;
+  height: 50px;
+  min-height: 50px; 
+  margin: auto;
+  background: rgba(0, 0, 0, 0.9); 
+  position:sticky;
+  z-index: 1000;
   
-  #header {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    top: -4px;
-    width: 100%;
-    height: 70px;
-    min-height: 50px; 
-    margin: auto;
-    background: rgba(0, 0, 0, 0.8); 
-    position: sticky;
-  }
-  
+}
+
+#header.header-nav {
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  height: 40%;
+  left:10%;
+}
+
   #header.header-scrolled { 
     top: 0;
     background: rgba(0, 0, 0, 0.85);
@@ -66,14 +66,15 @@ h1, h2, h3, h4, h5, h6 {
     left:10px;
     
   }
- 
 
-.navbar {
+#header .navbar {
   background: #000;
   padding: 10px 40px;
   display: flex;
   justify-content: flex-end;
   font-family: 'Georgia', serif;
+  z-index: 2000;
+  position: relative;
 }
 
 /* Oculta el menú por defecto en móviles */
@@ -212,7 +213,6 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100%;
-  background: url("assets/img/fondo.jpg");
   background-size:cover;
   padding: 0;
   margin: 0;
@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -4%; 
   width: 15%; 
   z-index: 1000; 
-  overflow-y: auto;
+  
 }
 
 
@@ -250,22 +250,22 @@ h1, h2, h3, h4, h5, h6 {
   
   padding: 0;
   color: #f8e3b6;
-  
-  
+  flex-direction: column;
+    margin-top: 60px;
 }
 
 .menu li {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .menu li a {
   display: flex;
-  align-items: center;
   text-decoration: none;
   color: #ffffff; 
-  padding: 5%;
   transition: 0.3s;
-  margin-top: 10%;
+  margin: 20px;
+  padding: 5px;
+   align-items: center;
 }
 
 .menu li a img {
@@ -286,13 +286,9 @@ h1, h2, h3, h4, h5, h6 {
 .menu-lateral.close .menu li a .text {
   opacity: 1;
   visibility: visible;
-  display: block;
+  display: flex;
   
 }
-.menu li a {
-   margin-top: 25%;
-}
-
 
 .menu li a:hover {
   transform: scale(1.05);
@@ -459,7 +455,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .description {
   color: #fff;
-  text-align:justify;
+  text-align:left;
   margin-top: 5px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0px;
@@ -470,7 +466,7 @@ h1, h2, h3, h4, h5, h6 {
 .description h3 {
   margin: 0;
   font-size: 1.5em;
-  color: #ffffff;
+  color: #b68945;
 }
 
 .description p {
@@ -481,12 +477,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .close {
   position: fixed;
-  right: 30px;
+  right: 50px;
   color: white;
   text-decoration: none;
-  top: 60px;
+  top: 100px;
   z-index: 100;
-   font-size: 100%;
+  font-size: 100%;
 }
 
 .prev,
@@ -502,11 +498,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prev {
-  left: 5%;
+  left: 10%;
 }
 
 .next {
-  right: 3%;
+  right: 10%;
 }
 
 .prev:hover,
@@ -561,22 +557,45 @@ h1, h2, h3, h4, h5, h6 {
     width: 30%; 
     transition: transform 0.3s ease;
   }
+  @media (max-width: 768px) {
+  .creadoras {
+    width: 80%;     /* O el tamaño que desees */
+    max-width: 300px;
+    height: auto;   /* Para mantener proporción */
+    margin: 0 auto;
+    display: block; /* Para centrar si usas margin auto */
+  }
+}
 
   #toggle-sidebar:checked ~ .menu-lateral {
     transform: translateX(0);
+    z-index: 5;
+    
   }
 
   .toggle-btn {
     position: fixed;
-    top: 70px;
-    left: 10px;
+    top: 65px;
     background: #000;
     color: white;
     padding: 10px;
-    font-size: 24px;
+    font-size: 22px;
     z-index: 1001;
     cursor: pointer;
     border-radius: 5px;
   }
 }
 
+  footer {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 110%;
+      z-index: 1000;
+      left: -35px;
+  }
+  

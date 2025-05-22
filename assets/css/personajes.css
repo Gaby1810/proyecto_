@@ -224,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.2);
   transition: width 0.3s ease;
-  margin-top: 80; 
+  margin-top: -4%; 
   z-index: 10; 
   display: block;
 }
@@ -441,14 +441,27 @@ margin-bottom: 15px;}
 
   .toggle-btn {
     position: fixed;
-    top: 70px;
-    left: 10px;
+    top: 65px;
     background: #000;
     color: white;
     padding: 10px;
-    font-size: 24px;
+    font-size: 22px;
     z-index: 1001;
     cursor: pointer;
     border-radius: 5px;
   }
 }
+
+  footer {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 110%;
+      z-index: 1000;
+      left: -35px;
+  }
+  
