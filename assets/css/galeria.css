@@ -230,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: width 0.3s ease;
-  margin-top: -4%; 
+  margin-top: -8%; 
   width: 15%; 
   z-index: 1000; 
   
@@ -251,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   color: #f8e3b6;
   flex-direction: column;
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .menu li {
@@ -269,11 +269,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu li a img {
-  width: 15%;
+  width: 20%;
   height: 15%;
   margin-right: 10%;
   border-radius: 30%;
   border: 2px solid #bf9004;
+  
 }
 
 .menu li a .text {
@@ -281,6 +282,7 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   overflow: hidden;
   visibility: hidden;
+  font-size:medium;
 }
 
 .menu-lateral.close .menu li a .text {
@@ -338,6 +340,7 @@ h1, h2, h3, h4, h5, h6 {
  width: 100%;
   height: 300px;
   object-fit: cover; /* recorta la imagen para que se vea uniforme */
+  cursor: pointer;
 }
 
 .container li .content {
@@ -370,6 +373,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 10px;
   margin-right: 10px;
   position:relative;
+  
 }
 
 .creadoras li {
@@ -381,6 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 2% solid #ddd;
   list-style: none;
   position: relative;
+  cursor: pointer;
 }
 
 .creadoras li:hover {
@@ -392,6 +397,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
+
 }
 
 .creadoras li .content {
@@ -405,6 +412,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  
 }
 
 .creadoras li:hover .content {
@@ -451,6 +459,7 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: contain;
   border: 5% solid rgb(0, 0, 0);
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .description {
@@ -472,6 +481,8 @@ h1, h2, h3, h4, h5, h6 {
 .description p {
   margin-top: 10px;
   font-size: 1em;
+  font-family: Helvetica;
+  
 }
 
 
@@ -551,6 +562,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
+
 @media (max-width: 768px) {
   .menu-lateral {
     transform: translateX(-100%);
