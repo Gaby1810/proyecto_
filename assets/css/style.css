@@ -185,14 +185,7 @@ body {
     cursor: pointer;
   }
 }
-/* Ocultar carrusel en móviles */
-@media (max-width: 768px) {
-  .carrusel {
-    display: none;
-  }
-}
-
-
+/* Carrusel principal */
 .carrusel {
   width: 1000px;
   height: 200px;
@@ -264,28 +257,337 @@ body {
   100% { transform: translateX(-5000px); }
 }
 
+/* Encabezado estilizado */
+h2 {
+  font-size: 2.2em;
+  color: #fff;
+  text-align: center;
+  margin: 30px 0 20px;
+  position: relative;
+  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  text-shadow: 
+    -2px -2px 3px #000,  
+    2px -2px 3px #000, 
+    -2px 2px 3px #000, 
+    2px 2px 3px #000;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
 
-  
-  h2 {
-  font-size: 2em;
-color: #ffdf75;
-text-align: center;
-margin: 20px 0;
-position: relative;
-text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Crea el efecto de contorno negro */
+h2:hover {
+  color: #f0f0f0;
+  text-shadow: 
+    0 0 10px #fff, 
+    0 0 20px #fff;
+}
 
+/* Diseño responsivo para móviles y tablets */
+@media screen and (max-width: 768px) {
+  .carrusel {
+    width: 100vw;
+    height: 200px;
+   
   }
-  
-  h2::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 3px;
-    background-color: #f8e3b6;
-    margin: 10px auto;
-    border: 1px solid black; /* Esto añade un contorno negro */
-    
+
+  .carrusel-imagenes {
+    display: flex;
+    width: calc(100vw * 6); /* 6 imágenes */
+    animation: deslizarMobile 24s infinite;
   }
+
+  .carrusel-item {
+    width: 100vw;
+    height: 200px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .carrusel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .boton-enlace {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+/* Animación para móviles usando unidades vw */
+@keyframes deslizarMobile {
+  0% { transform: translateX(0); }
+  16.66% { transform: translateX(0); }
+
+  16.67% { transform: translateX(-100vw); }
+  33.33% { transform: translateX(-100vw); }
+
+  33.34% { transform: translateX(-200vw); }
+  50% { transform: translateX(-200vw); }
+
+  50.01% { transform: translateX(-300vw); }
+  66.66% { transform: translateX(-300vw); }
+
+  66.67% { transform: translateX(-400vw); }
+  83.33% { transform: translateX(-400vw); }
+
+  83.34% { transform: translateX(-500vw); }
+  100% { transform: translateX(-500vw); }
+}
+
+
+
+
+h2 {
+  font-size: 2.2em;
+  color: #fff; /* Blanco puro */
+  text-align: center;
+  margin: 30px 0 20px;
+  position: relative;
+  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  text-shadow: 
+    -2px -2px 3px #000,  
+    2px -2px 3px #000, 
+    -2px 2px 3px #000, 
+    2px 2px 3px #000;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+h2:hover {
+  color: #f0f0f0; /* Blanco ligeramente más suave al hover */
+  text-shadow: 
+    0 0 10px #fff, 
+    0 0 20px #fff;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #fff, #ccc, #fff);
+  margin: 15px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #fff;
+  border: 1px solid #888;
+  transition: width 0.4s ease;
+}
+
+h2:hover::after {
+  width: 160px;
+  background: linear-gradient(90deg, #fff, #eee, #fff);
+}
+
+
+
+/* ===== Sección carrusel con fondo animado ===== */
+.galeria-carrusel {
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #ffc800, #ffb811, #5d4037);
+  background-size: 400% 400%;
+  animation: fondoAnimado 15s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes fondoAnimado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.galeria-carrusel h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #f5deb3;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px #000;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 2px solid #dba634;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  animation: iluminarTexto 5s ease-in-out infinite alternate;
+}
+
+@keyframes iluminarTexto {
+  0% {
+    box-shadow: 0 0 10px #dba634, 0 0 20px #000 inset;
+  }
+  100% {
+    box-shadow: 0 0 20px #dba634, 0 0 30px #000 inset;
+  }
+}
+
+.galeria-carrusel h2 .icon-left svg,
+.galeria-carrusel h2 .icon-right svg {
+  filter: drop-shadow(1px 1px 1px #000);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.galeria-carrusel h2:hover .icon-left svg {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.galeria-carrusel h2:hover .icon-right svg {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* ===== Carrusel contenedor ===== */
+.carrusel-fotos {
+  display: flex;
+  overflow-x: auto;
+  gap: 25px;
+  padding: 15px 0;
+  scroll-behavior: smooth;
+  scrollbar-height: thin;
+}
+
+/* Scrollbar personalizada */
+.carrusel-fotos::-webkit-scrollbar {
+  height: 10px;
+}
+.carrusel-fotos::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+.carrusel-fotos::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Ítems de video */
+.carrusel-item-video {
+  flex: 0 0 auto;
+  width: 480px;
+  height: 270px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  background-color: #000;
+}
+
+.carrusel-item-video:hover {
+  transform: scale(1.05);
+}
+
+.carrusel-item-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: auto;
+}
+
+/* Responsive (tablet) */
+@media (max-width: 992px) {
+  .carrusel-item-video {
+    width: 360px;
+    height: 202px;
+  }
+
+  .galeria-carrusel h2 {
+    font-size: 2.2em;
+  }
+}
+
+/* Responsive (móvil) */
+@media (max-width: 600px) {
+  .carrusel-item-video {
+    width: 280px;
+    height: 158px;
+  }
+
+  .galeria-carrusel h2 {
+    font-size: 1.8em;
+  }
+
+  .carrusel-fotos {
+    gap: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* CONTENEDOR Y TEXTO */
+.curiosidades-historicas {
+  background: linear-gradient(to right, #000000, #353131);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.curiosidades-historicas h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.curiosidades-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.curiosidad {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.curiosidad:hover {
+  transform: scale(1.05);
+}
+
+.curiosidad h3 {
+  color: #c0392b;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 10;
+}
+
+.curiosidad p {
+  color: #555;
+  font-size: 1em;
+  line-height: 1.5em;
+  position: relative;
+  z-index: 10;
+}
+
+
+
+
+
 
 
 
@@ -293,31 +595,42 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
   /* Estilo para los videos verticales tipo TikTok */
 .video-vertical {
-  width: 100%; /* Para que ocupe el ancho disponible */
+   width: 100%;
   height: auto;
-  max-width: 320px;  /* Ancho máximo para los videos */
-  aspect-ratio: 9/16; /* Relación 9:16 para hacerlo vertical */
-  object-fit: cover;  /* Asegura que el video llene el contenedor sin deformarse */
-  border-radius: 10px;
+  max-width: 300px;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  border-radius: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+ 
 /* Contenedor de personajes destacados */
 .grid-destacados {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+ 
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 20px;
   justify-items: center;
   padding: 20px;
+   display: flex; /* Cambia de grid a flex para carrusel horizontal */
+  overflow-x: auto; /* Scroll horizontal */
+  scroll-snap-type: x mandatory; /* Ajuste tipo carrusel */
+  gap: 20px;
+  padding: 20px;
+  scroll-padding: 20px;
 }
 
 /* Estilo para cada "personaje" */
 .personaje {
+   flex: 0 0 auto; /* No se encoge, no crece */
+  scroll-snap-align: center; /* Alineación tipo carrusel */
   text-align: center;
   background-color: #111;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 30px;
   color: white;
+  width: 70%;
+  max-width: 300px;
 }
 
 /* Títulos de personajes */
@@ -345,36 +658,7 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: 0 auto;
     font-family: var(--font-sans);
   }
-  @media (min-width: 600px) {
-    .page-content {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 800px) {
-    .page-content {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  .page-content {
-    display: grid;
-    grid-gap: 2rem; /* Espacio entre las tarjetas */
-    padding: 1rem;
-    max-width: 1024px;
-    margin: 0 auto;
-    font-family: var(--font-sans);
-  }
-  
-  @media (min-width: 600px) {
-    .page-content {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 800px) {
-    .page-content {
-      grid-template-columns: repeat(3, 1fr); /* incluye las 3 tarjetas */
-    }
-  }
+ 
   
   @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
   
@@ -393,203 +677,110 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   
   
   
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
   
-  .card {
-    position: relative;
-    top: -50px;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    padding: 1rem;
-    width: 300px;
-    height: 400px;
-    text-align: center;
-    color: whitesmoke;
-    
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-                0 2px 2px rgba(0, 0, 0, 0.1),
-                0 4px 4px rgba(0, 0, 0, 0.1),
-                0 8px 8px rgba(0, 0, 0, 0.1),
-                0 16px 16px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
-  }
-  
-  .card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 110%;
-    background-size: cover;
-    background-position: center;
-    transition: transform calc(var(--d) * 1.5) var(--e);
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  .card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%;
-    pointer-events: none;
-   
-    transform: translateY(-50%);
-    transition: transform calc(var(--d) * 2) var(--e);
-    z-index: 0;
-  }
- 
-/* Imagenes específicas */
-.card:nth-child(1)::before {
-  background-image: image-set(url(../img/mariinst.jpg));
+  /* Importación de fuentes */
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+/* Variables de fuente y animación */
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
 }
 
-.card:nth-child(2)::before {
-  background-image: image-set(url(../img/map.jpg));
+/* Reset general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.card:nth-child(3)::before {
-  background-image: image-set( url(../img/historicos.png));
+/* Fondo general para la sección de destacados */
+.destacados {
+  background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+  padding: 3rem 1rem;
+  color: white;
+  text-align: center;
+  font-family: var(--font-sans);
 }
 
-  /* Contenido */
-  .card .content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform var(--d) var(--e);
-    padding: 1rem;
+/* Título de la sección */
+.destacados h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #ffd700;
+}
+
+/* Carrusel horizontal centrado */
+.grid-destacados {
+  display: flex;
+  justify-content: center; /* Centra los elementos */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+  scroll-padding: 20px;
+}
+.destacados-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+
+/* Tarjeta de cada personaje */
+.personaje {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 20px;
+  width: 280px;
+  max-width: 90%;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.personaje:hover {
+  transform: scale(1.05);
+}
+
+/* Video vertical estilo TikTok */
+.video-vertical {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Título del personaje */
+.personaje h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffcc33;
+}
+
+/* Descripción del personaje */
+.personaje p {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #bbb;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .personaje {
+    width: 90%;
   }
-  .card .content > * + * {
-    margin-top: 1rem;
+
+  h1, h2, h3 {
+    font-size: 1.5rem;
   }
-  .card .title {
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
-  .card .copy {
-    font-family: var(--font-serif);
-    font-size: 1.125rem;
-    font-style: italic;
-  }
-  .card .btn {
-    margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.75rem;
-    font-weight: bold;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    color: white;
-    background-color: black;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .card .btn:hover {
-    background-color: #222;
-  }
-  .card .btn:focus {
-    outline: 1px dashed rgba(255, 153, 0, 0.349);
-    outline-offset: 3px;
-  }
-  
-  /* Hover Efectos */
-  @media (hover: hover) and (min-width: 600px) {
-    .card::after {
-      transform: translateY(0);
-    }
-    .card .content {
-      transform: translateY(calc(100% - 4.5rem));
-    }
-    .card .content > *:not(.title) {
-      opacity: 0;
-      transform: translateY(1rem);
-      transition: transform var(--d) var(--e), opacity var(--d) var(--e);
-    }
-  
-    .card:hover,
-    .card:focus-within {
-      align-items: center;
-    }
-    .card:hover::before,
-    .card:focus-within::before {
-      transform: translateY(-4%);
-    }
-    .card:hover::after,
-    .card:focus-within::after {
-      transform: translateY(-50%);
-    }
-    .card:hover .content,
-    .card:focus-within .content {
-      transform: translateY(0);
-    }
-    .card:hover .content > *:not(.title),
-    .card:focus-within .content > *:not(.title) {
-      opacity: 1;
-      transform: translateY(0);
-      transition-delay: calc(var(--d) / 8);
-    }
-  }
-  
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .card {
-      width: 90%;
-      padding: 1.5rem;
-    }
-  }
-  @media (max-width: 768px) {
-    .card {
-      width: 95%;
-      padding: 1rem;
-    }
-  }
-  @media (max-width: 480px) {
-    .card {
-      width: 100%;
-      padding: 0.8rem;
-    }
-  }
-  
-  /* Destacados */
-  .grid-destacados {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .personaje img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  
-  
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .grid-destacados {
-      grid-template-columns: 1fr;
-    }
-  
-    h1, h2, h3 {
-      font-size: 1.5rem;
-    
-    }
-  }
-  
+}
+
   footer {
       background: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(5px);
@@ -603,4 +794,12 @@ text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
       left: -35px;
   }
   
+
+
+
+  
+section, .section {
+  margin: 100px 0; /* margen vertical grande para separar secciones */
+  padding: 50px 30px; /* padding interno amplio */
+}
 
