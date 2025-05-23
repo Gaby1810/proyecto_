@@ -3,201 +3,234 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Personajes Historicos</title>
-  <!-- Template Main CSS File -->
-  <link  rel="stylesheet" href="assets/css/style.css">
-</head>
+  <title>Personajes Históricos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 
+</head>
 
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-
       <h1 class="logo"></h1>
-<nav class="navbar">
-  <!-- Menú hamburguesa -->
-  <label for="menuhambur">
-    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-    </svg>
-  </label>
-  <input type="checkbox" id="menuhambur" hidden>
+      <nav class="navbar">
+        <label for="menuhambur">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </label>
+        <input type="checkbox" id="menuhambur" hidden>
 
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li class="menu-principal">
+            <input type="checkbox" id="toggle-personajes" hidden>
+            <label for="toggle-personajes" class="nav-link">Personajes Históricos ▼</label>
+            <ul>
+              <li><a href="#">Nikola Tesla</a>
+                <ul>
+                  <li><a href="nikolas_biografia.html">Biografía</a></li>
+                  <li><a href="nikolas_legado.html">Legado</a></li>
+                  <li><a href="neil_curiosidades.html">Curiosidades</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Marie Curie</a>
+                <ul>
+                  <li><a href="marie_biografia.html">Biografía</a></li>
+                  <li><a href="marie_legado.html">Legado</a></li>
+                  <li><a href="marie_curiosidades.html">Curiosidades</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Leonardo da Vinci</a>
+                <ul>
+                  <li><a href="leonardo_biografia.html">Biografía</a></li>
+                  <li><a href="leonardo_legado.html">Legado</a></li>
+                  <li><a href="leonardo_curiosidades.html">Curiosidades</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Neil Armstrong</a>
+                <ul>
+                  <li><a href="neil_biografia.html">Biografía</a></li>
+                  <li><a href="neil_legado.html">Legado</a></li>
+                  <li><a href="neil_curiosidades.html">Curiosidades</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Felipe II Rey de España</a>
+                <ul>
+                  <li><a href="felipe_biografia.html">Biografía</a></li>
+                  <li><a href="felipe_legado.html">Legado</a></li>
+                  <li><a href="felipe_curiosidades.html">Curiosidades</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Juan Pablo II</a>
+                <ul>
+                  <li><a href="juan_biografia.html">Biografía</a></li>
+                  <li><a href="juan_legado.html">Legado</a></li>
+                  <li><a href="juan_curiosidades.html">Curiosidades</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="creadoras.html">Creadoras</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Menú desplegable principal -->
-    <li class="menu-principal">
-      <input type="checkbox" id="toggle-personajes" hidden>
-      <label for="toggle-personajes" class="nav-link">Personajes Históricos ▼</label>
-      <ul>
-        <!-- Submenús por personaje -->
-        <li class="menu-principal">
-          <input type="checkbox" id="tesla-sub" hidden>
-        <label for="tesla-sub" class="nav-link"><span class="full-name">Nikolas Tesla</span></label>
-          <ul>
-            <li><a href="nikolas_biografia.html">Biografía</a></li>
-            <li><a href="nikolas_legado.html">Legado</a></li>
-            <li><a href="neil_curiosidades.html">Curiosidades</a></li>
-          </ul>
-        </li>
-
-        <li class="menu-principal">
-          <input type="checkbox" id="curie-sub" hidden>
-          <label for="curie-sub" class="nav-link"><span class="full-name">Marie Curie</span></label>
-          <ul>
-            <li><a href="marie_biografia.html">Biografía</a></li>
-            <li><a href="marie_legado.html">Legado</a></li>
-            <li><a href="marie_curiosidades.html">Curiosidades</a></li>
-          </ul>
-        </li>
-
-        <li class="menu-principal">
-          <input type="checkbox" id="leonardo-sub" hidden>
-          <label for="leonardo-sub" class="nav-link"><span class="full-name">Leonardo da Vinci</span></label>
-          <ul>
-            <li><a href="leonardo_biografia.html">Biografía</a></li>
-            <li><a href="leonardo_legado.html">Legado</a></li>
-            <li><a href="leonardo_curiosidades.html">Curiosidades</a></li>
-          </ul>
-        </li>
-
-        <li class="menu-principal">
-          <input type="checkbox" id="neil-sub" hidden>
-       <label for="neil-sub" class="nav-link"><span class="full-name">Neil Armstrong</span></label>
-          <ul>
-            <li><a href="neil_biografia.html">Biografía</a></li>
-            <li><a href="neil_legado.html">Legado</a></li>
-            <li><a href="neil_curiosidades.html">Curiosidades</a></li>
-          </ul>
-        </li>
-
-        <li class="menu-principal">
-          <input type="checkbox" id="felipe-sub" hidden>
-    <label for="felipe-sub" class="nav-link"><span class="full-name">Felipe II Rey de España </span></label>
-          <ul>
-            <li><a href="felipe_biografia.html">Biografía</a></li>
-            <li><a href="felipe_legado.html">Legado</a></li>
-            <li><a href="felipe_curiosidades.html">Curiosidades</a></li>
-          </ul>
-        </li>
-
-       <li class="menu-principal">
-  <input type="checkbox" id="juan-sub" hidden>
-  <label for="juan-sub" class="nav-link"><span class="full-name">Juan Pablo II</span></label>
-  <ul>
-    <li><a href="juan_biografia.html">Biografía</a></li>
-    <li><a href="juan_legado.html">Legado</a></li>
-    <li><a href="juan_curiosidades.html">Curiosidades</a></li>
-  </ul>
-</li>
- </ul>
-    </li>
-
-
-    <li><a href="galeria.html">Galería</a></li>
-    <li><a href="creadoras.html">Creadoras</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
-</header><!-- End Header -->
-
-<!-- =======personajes introduccion ======= -->
+  <!-- Carrusel -->
+ <!-- Carrusel automático de personajes -->
 <div class="carrusel">
   <div class="carrusel-imagenes" id="slider">
+
     <div class="carrusel-item">
-      <img src="assets/img/Diseño sin título.png" alt="Producto 1">
-      <a href="" class="boton-enlace" target="_blank">Conoce sobre Marie</a>
+      <img src="assets/img/Diseño sin título.png" alt="Marie Curie">
+      <a href="marie_biografia.html" class="boton-enlace" target="_blank">Conoce sobre Marie</a>
     </div>
+
     <div class="carrusel-item">
-      <img src="assets/img/juan.png" alt="Producto 2">
-      <a href="https://enlace2.com" class="boton-enlace" target="_blank">Conoce sobre</a>
+      <img src="assets/img/juan.png" alt="Juan Pablo II">
+      <a href="juan_biografia.html" class="boton-enlace" target="_blank">Conoce sobre Juan</a>
     </div>
+
     <div class="carrusel-item">
-      <img src="assets/img/felipe.png" alt="Producto 3">
-      <a href="https://enlace3.com" class="boton-enlace" target="_blank">Conoce sobre</a>
+      <img src="assets/img/felipe.png" alt="Felipe II">
+      <a href="felipe_biografia.html" class="boton-enlace" target="_blank">Conoce sobre Felipe</a>
     </div>
+
     <div class="carrusel-item">
-      <img src="assets/img/neil.png" alt="Producto 4">
-      <a href="https://enlace4.com" class="boton-enlace" target="_blank">Conoce sobre</a>
+      <img src="assets/img/neil.png" alt="Neil Armstrong">
+      <a href="neil_biografia.html" class="boton-enlace" target="_blank">Conoce sobre Neil</a>
     </div>
+
     <div class="carrusel-item">
-      <img src="assets/img/nikola.png" alt="Producto 5">
-      <a href="https://enlace5.com" class="boton-enlace" target="_blank">Conoce sobre</a>
+      <img src="assets/img/nikola.png" alt="Nikola Tesla">
+      <a href="nikolas_biografia.html" class="boton-enlace" target="_blank">Conoce sobre Tesla</a>
     </div>
+
     <div class="carrusel-item">
-      <img src="assets/img/Leonardo Da Vinchi.png" alt="Producto 6">
-      <a href="https://enlace6.com" class="boton-enlace" target="_blank">Conoce sobre</a>
+      <img src="assets/img/Leonardo Da Vinchi.png" alt="Leonardo da Vinci">
+      <a href="leonardo_biografia.html" class="boton-enlace" target="_blank">Conoce sobre Leonardo</a>
     </div>
+
   </div>
 </div>
 
 
+ <section class="galeria-carrusel">
 
+  <h2>
+    <span class="icon-left" aria-hidden="true">
+      <!-- Corona SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64" fill="none" stroke="#dba634" stroke-width="3" stroke-linejoin="round">
+        <path d="M4 44 L12 16 L20 44 L28 16 L36 44 L44 16 L52 44 L60 16 L60 52 L4 52 Z" fill="none"/>
+        <circle cx="12" cy="12" r="4" fill="#dba634"/>
+        <circle cx="28" cy="12" r="4" fill="#dba634"/>
+        <circle cx="44" cy="12" r="4" fill="#dba634"/>
+      </svg>
+    </span>
+    Galería de Videos
+    <span class="icon-right" aria-hidden="true">
+      <!-- Pergamino SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 64 64" fill="none" stroke="#dba634" stroke-width="3" stroke-linejoin="round">
+        <rect x="12" y="8" width="40" height="48" rx="6" ry="6" fill="none"/>
+        <line x1="20" y1="20" x2="52" y2="20" stroke="#dba634" stroke-width="2"/>
+        <line x1="20" y1="30" x2="52" y2="30" stroke="#dba634" stroke-width="2"/>
+        <line x1="20" y1="40" x2="52" y2="40" stroke="#dba634" stroke-width="2"/>
+        <line x1="20" y1="50" x2="52" y2="50" stroke="#dba634" stroke-width="2"/>
+      </svg>
+    </span>
+  </h2>
 
-<section class="destacados">
-  <h2>Personajes Destacados</h2>
-  <div class="grid-destacados">
-    
-    <div class="personaje">
-      <video controls class="video-vertical">
-        <source src="assets/videos/marievideo.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
-      </video>
-      <h3>Marie Curie</h3>
-      <p>Revolucionó la ciencia con sus descubrimientos en radiactividad.</p>
+  <div class="carrusel-contenedor">
+    <div class="carrusel-fotos">
+      <div class="carrusel-item-video">
+        <iframe src="https://www.youtube.com/embed/Okgclx1vY8Q?autoplay=1&mute=1&loop=1&playlist=Okgclx1vY8Q&controls=1"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="carrusel-item-video">
+        <iframe src="https://www.youtube.com/embed/hAhBg9M97ho?autoplay=1&mute=1&loop=1&playlist=hAhBg9M97ho&controls=1"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="carrusel-item-video">
+        <iframe src="https://www.youtube.com/embed/cb1yTWVjx4U?autoplay=1&mute=1&loop=1&playlist=cb1yTWVjx4U&controls=1"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="carrusel-item-video">
+        <iframe src="https://www.youtube.com/embed/RLM8jylwrZU?autoplay=1&mute=1&loop=1&playlist=RLM8jylwrZU&controls=1"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
     </div>
+  </div>
 
-    <div class="personaje">
-      <video controls class="video-vertical">
-        <source src="videos/tesla.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
-      </video>
-      <h3>Nikola Tesla</h3>
-      <p>Un visionario en la electricidad y la energía, conocido por sus inventos revolucionarios.</p>
+</section>
+
+
+
+  
+
+
+  <section class="curiosidades-historicas">
+  <h2>Curiosidades Históricas</h2>
+  <div class="curiosidades-grid">
+    <div class="curiosidad">
+      <div class="img-dinamica esfera-radiante"></div>
+      <h3>Marie Curie llevaba tubos de ensayo en su bolso</h3>
+      <p>Durante sus investigaciones, Marie transportaba sustancias radiactivas sin saber del peligro. Su bolso brillaba en la oscuridad.</p>
     </div>
-
-    <div class="personaje">
-      <video controls class="video-vertical">
-        <source src="videos/da-vinci.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
-      </video>
-      <h3>Leonardo da Vinci</h3>
-      <p>El genio renacentista que destacó en arte, ciencia y diseño innovador.</p>
+    <div class="curiosidad">
+      <div class="img-dinamica esfera-radiante"></div>
+      <h3>Leonardo escribía al revés</h3>
+      <p>Utilizaba escritura especular, de derecha a izquierda, como método personal y secreto para tomar notas.</p>
     </div>
-
+    <div class="curiosidad">
+      <div class="img-dinamica esfera-radiante"></div>
+     <h3>Tenía una memoria fotográfica excepcional</h3>
+<p>Tesla podía visualizar y memorizar máquinas complejas y fórmulas sin necesidad de dibujos o notas.</p>
+    </div>
   </div>
 </section>
-<!-- carta -->
-<main class="page-content">
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Descubrimientos Científicos</h2>
-      <p class="copy">Explora los logros de Marie Curie y cómo transformó el campo de la ciencia con sus investigaciones en radiactividad.</p>
-      <button class="btn">Saber más</button>
+<!-- Destacados -->
+  <section class="destacados">
+    <h2>Personajes Destacados</h2>
+    <div class="destacados-wrapper">
+      <div class="grid-destacados">
+        <div class="personaje">
+          <video controls class="video-vertical">
+            <source src="assets/videos/marievideo.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+          <h3>Marie Curie</h3>
+          <p>Revolucionó la ciencia con sus descubrimientos en radiactividad.</p>
+        </div>
+        <div class="personaje">
+          <video controls class="video-vertical">
+            <source src="assets/videos/nikola.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+          <h3>Nikola Tesla</h3>
+          <p>Un visionario en la electricidad y la energía, conocido por sus inventos revolucionarios.</p>
+        </div>
+        <div class="personaje">
+          <video controls class="video-vertical">
+            <source src="assets/videos/leonardo.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+          <h3>Leonardo da Vinci</h3>
+          <p>El genio renacentista que destacó en arte, ciencia y diseño innovador.</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Innovaciones Tecnológicas</h2>
-      <p class="copy">Descubre las contribuciones de Tesla y su impacto en el mundo moderno.</p>
-      <button class="btn">Leer más</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Arte y Genio</h2>
-      <p class="copy">Sumérgete en las obras y conceptos artísticos que hicieron de Leonardo da Vinci una figura histórica inmortal.</p>
-      <button class="btn">Explorar</button>
-    </div>
-  </div>
-</main>
+<header>
+ 
 
 
+ 
+
+  <footer>Proyecto UDB Personajes Históricos</footer>
 </body>
-
-<footer>Proyecto UDB Personajes Historicos</footer>
 </html>
