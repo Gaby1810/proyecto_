@@ -4,15 +4,9 @@ body {
   background-size: cover; /* Hace que la imagen cubra todo el viewport */
   margin: 0;
   padding: 0;
-
   content: "";
   position: absolute;
-
-
   width: 100%;
-
-
-  
 }
 
 body::before {
@@ -26,8 +20,6 @@ body::before {
   z-index: -1; 
 }
 
-
-
   
   /*--------------------------------------------------------------
   # Header
@@ -35,7 +27,6 @@ body::before {
 
   
   #header {
-    
     padding: 0px;
     top: 0px;
     width: 100%;
@@ -46,7 +37,7 @@ body::before {
     position: sticky;
     z-index: 1000;
   }
-  
+
   #header.header-scrolled { 
     top: 0;
     background: black;
@@ -196,33 +187,7 @@ body::before {
   visibility: hidden;
   display: none;
 }
-    
-    .introduccion {
-    display: flex;
-    flex-direction: column;
-    top: 90px;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8e3b6;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 800px;
-    height: 30px;
-    margin: 80px auto;
-    text-align: center; 
-    font-family: 'Arial', sans-serif;
-    }
-    
-    .introduccion h1 {
-    color: #3c3400;
-    margin-bottom: 10px;
-    height: -10px;
-    top: -30px; 
-    text-align: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    font-family: 'Times New Roman', serif;
-    }
-     
+
     #login input {
     font-family: 'Times New Roman', serif;
     border-radius: 5px;
@@ -255,16 +220,30 @@ body::before {
     height: 40px;
     color: #000000;
     margin-top: 3px;
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
+    }
+
+    .boton:hover {
+    color: #ffffff; 
+    text-shadow: 0 0 8px #fffacd, 0 0 15px #fffacd; 
+    cursor: pointer; 
     }
     
+    
     h2 {
-    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
     color: #ffdf75;
     text-align: center;
     margin: 20px 0;
     position: relative;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
-    
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    h2:hover {
+    color: #fffacd; 
+    text-shadow: 0 0 8px #ffdf75, 0 0 15px #ffdf75, 0 0 20px #ffdf75;
     }
     
     h2::after {
@@ -274,8 +253,12 @@ body::before {
     height: 3px;
     background-color: #f8e3b6;
     margin: 10px auto;
-    border: 1px solid black; 
-    
+    border: 1px solid black;
+    transition: width 0.3s ease;
+    }
+
+    h2:hover::after {
+    width: 130px; 
     }
     
     .destacados {
