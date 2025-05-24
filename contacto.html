@@ -26,7 +26,6 @@
   <ul>
     <li><a href="index.html">Inicio</a></li>
 
-    <!-- Menú desplegable principal -->
     <li class="menu-principal">
       <input type="checkbox" id="toggle-personajes" hidden>
       <label for="toggle-personajes" class="nav-link">Personajes Históricos ▼</label>
@@ -34,7 +33,7 @@
         <!-- Submenús por personaje -->
         <li class="menu-principal">
           <input type="checkbox" id="tesla-sub" hidden>
-        <label for="tesla-sub" class="nav-link"><span class="full-name">Nikolas Tesla</span></label>
+                <label for="tesla-sub" class="nav-link"><span class="full-name"><a href="nikolas_biografia.html" >Nikolas Tesla</a></span></label>
           <ul>
             <li><a href="nikolas_biografia.html">Biografía</a></li>
             <li><a href="nikolas_legado.html">Legado</a></li>
@@ -44,7 +43,7 @@
 
         <li class="menu-principal">
           <input type="checkbox" id="curie-sub" hidden>
-          <label for="curie-sub" class="nav-link"><span class="full-name">Marie Curie</span></label>
+          <label for="curie-sub" class="nav-link"><span class="full-name"><a href="marie_biografia.html">Marie Curie</a></span></label>
           <ul>
             <li><a href="marie_biografia.html">Biografía</a></li>
             <li><a href="marie_legado.html">Legado</a></li>
@@ -54,7 +53,7 @@
 
         <li class="menu-principal">
           <input type="checkbox" id="leonardo-sub" hidden>
-          <label for="leonardo-sub" class="nav-link"><span class="full-name">Leonardo da Vinci</span></label>
+          <label for="leonardo-sub" class="nav-link"><span class="full-name"><a href="leonardo_biografia.html">Leonardo da Vinci</span></label>
           <ul>
             <li><a href="leonardo_biografia.html">Biografía</a></li>
             <li><a href="leonardo_legado.html">Legado</a></li>
@@ -64,7 +63,7 @@
 
         <li class="menu-principal">
           <input type="checkbox" id="neil-sub" hidden>
-       <label for="neil-sub" class="nav-link"><span class="full-name">Neil Armstrong</span></label>
+       <label for="neil-sub" class="nav-link"><span class="full-name"><a href="neil_biografia.html">Neil Armstrong</a></span></label>
           <ul>
             <li><a href="neil_biografia.html">Biografía</a></li>
             <li><a href="neil_legado.html">Legado</a></li>
@@ -74,7 +73,7 @@
 
         <li class="menu-principal">
           <input type="checkbox" id="felipe-sub" hidden>
-    <label for="felipe-sub" class="nav-link"><span class="full-name">Felipe II Rey de España </span></label>
+    <label for="felipe-sub" class="nav-link"><span class="full-name"><a href="felipe_biografia.html">Felipe II Rey de España</a></span></label>
           <ul>
             <li><a href="felipe_biografia.html">Biografía</a></li>
             <li><a href="felipe_legado.html">Legado</a></li>
@@ -84,7 +83,7 @@
 
        <li class="menu-principal">
   <input type="checkbox" id="juan-sub" hidden>
-  <label for="juan-sub" class="nav-link"><span class="full-name">Juan Pablo II</span></label>
+  <label for="juan-sub" class="nav-link"><span class="full-name"><a href="juan_biografia.html">Juan Pablo II</a></span></label>
   <ul>
     <li><a href="juan_biografia.html">Biografía</a></li>
     <li><a href="juan_legado.html">Legado</a></li>
@@ -93,8 +92,6 @@
 </li>
  </ul>
     </li>
-
-
     <li><a href="galeria.html">Galería</a></li>
     <li><a href="creadoras.html">Creadoras</a></li>
     <li><a href="contacto.html">Contacto</a></li>
@@ -110,8 +107,8 @@
     <section class="destacados">
         <h2>Contactenos</h2>
         <form id="login" action="Form" method="post">
-          <input type="text" id="nombre" value="" pattern="^[a-zA-Z\s]+$" title="Solo se acepta letras"
-              class="control" placeholder="Nombre" required />
+          <input type="text" id="nombre" value="" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$" title="Solo se aceptan nombres"
+            class="control" placeholder="Nombre" required />
             <br>
           <input type="tel" id="telefono" value="" pattern="^[0-9]{4}-?[0-9]{4}$"
               title="Solo acepta números en el siguiente formato: 2222-2222" class="control"
@@ -124,11 +121,32 @@
               title="Formato de correo: NombreCorreo@dominio" class="control" placeholder="Correo Electrónico"
               required />
             <br>
-          <input type="text" id="pais" value="" pattern="^[a-zA-Z\s]+$" title="Solo se acepta letras"
-              title="Ingrese su país"
-              class="control" placeholder="País" required />
+          <select id="pais" class="control" required>
+              <option value="Seleccione el país">Seleccione el país</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Brasil">Brasil</option>
+              <option value="Chile">Chile</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Honduras">Honduras</option>
+              <option value="México">México</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Panamá">Panamá</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Perú">Perú</option>
+              <option value="República Dominicana">República Dominicana</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Belice">Belice</option>
+              <option value="Otro">Otro</option>
+          </select>
             <br>
-          <button class="boton" type="submit">Mandar datos</button>
+          <button class="boton" type="button" onclick="alert('Gracias por su mensaje.'); window.location.href = 'index.html';">Mandar datos</button>
 
         </form>
         <br>
